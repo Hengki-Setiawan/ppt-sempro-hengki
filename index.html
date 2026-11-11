@@ -9,6 +9,7 @@
   <script src="public/libs/tailwind.cdn.js"></script>
   <script src="public/libs/three.min.js"></script>
   <script src="public/libs/GLTFLoader.js"></script>
+  <script src="public/libs/DecalGeometry.js"></script>
   <script src="public/libs/OrbitControls.js"></script>
   <script src="public/libs/gsap.min.js"></script>
   
@@ -1119,9 +1120,9 @@
         id: 10,
         section: "DEMONSTRASI ARTEFAK SISTEM · MODUL STUDIO 3D",
         title: "Pengujian Interaktif Pratinjau Artefak Sistem WebGL 3D",
-        camPos: { x: 0, y: 0.1, z: 3.7 },
+        camPos: { x: 0, y: 0.10, z: 4.4 },
         camTarget: { x: 0, y: 0, z: 0 },
-        modelPos: { x: 0, y: -0.14, z: 0 },
+        modelPos: { x: 0, y: -0.08, z: 0 },
         modelRot: { x: 0, y: 0, z: 0 },
         isInteractive: true,
         showGizmo: false,
@@ -1267,49 +1268,43 @@
     let currentShirtColor = 0xf1f5f9; // Clean PBR Studio White (prevents diffuse clipping)
     
     // Apparel Decal Helper: Curved geometry that hugs the physical cotton mesh of the chest & back
-    function createCurvedDecalGeometry(w, h, segX = 16, segY = 8, curve = 0.42) {
+    function createCurvedDecalGeometry(w, h, segX = 24, segY = 12, curve = 0.38, isBack = false) {
       const geo = new THREE.PlaneGeometry(w, h, segX, segY);
       const pos = geo.attributes.position;
       for (let i = 0; i < pos.count; i++) {
         const x = pos.getX(i);
-        pos.setZ(i, -(x * x) * curve);
+        pos.setZ(i, isBack ? (x * x) * curve : -(x * x) * curve);
       }
       geo.computeVertexNormals();
       return geo;
     }
 
     // Front Chest Decal (Kamito Mascot Default - Curved Flush Against Cotton Chest Mesh)
-    const decalGeo = createCurvedDecalGeometry(0.38, 0.38, 16, 8, 0.42);
+    const decalGeo = createCurvedDecalGeometry(0.36, 0.36, 24, 12, 0.38, false);
     const decalMat = new THREE.MeshBasicMaterial({
       map: decalTextures.kamito,
       transparent: true,
       opacity: 1.0,
-      depthTest: true,
-      depthWrite: false,
-      polygonOffset: true,
-      polygonOffsetFactor: -4,
-      polygonOffsetUnits: -4
+      depthTest: false,
+      depthWrite: false
     });
     const decalMesh = new THREE.Mesh(decalGeo, decalMat);
-    decalMesh.renderOrder = 20;
-    decalMesh.position.set(0, 0.30, 0.466);
+    decalMesh.renderOrder = 25;
+    decalMesh.position.set(0, 0.28, 0.460);
     floatGroup.add(decalMesh);
 
-    // Back Decal on Upper Back (Punggung) - Curved Flush Against Upper Back Mesh
-    const backDecalGeo = createCurvedDecalGeometry(0.36, 0.289, 16, 8, 0.38);
+    // Back Decal on Upper Back (Punggung) - Proportional Logo (Aspect 1.2447:1) Curved Flush Against Upper Back
+    const backDecalGeo = createCurvedDecalGeometry(0.34, 0.273, 24, 12, 0.45, true);
     const backDecalMat = new THREE.MeshBasicMaterial({
       map: decalTextures.logoBlack,
       transparent: true,
       opacity: 0.98,
-      depthTest: true,
-      depthWrite: false,
-      polygonOffset: true,
-      polygonOffsetFactor: -6,
-      polygonOffsetUnits: -6
+      depthTest: false,
+      depthWrite: false
     });
     const backDecalMesh = new THREE.Mesh(backDecalGeo, backDecalMat);
-    backDecalMesh.renderOrder = 20;
-    backDecalMesh.position.set(0, 0.35, -0.485);
+    backDecalMesh.renderOrder = 25;
+    backDecalMesh.position.set(0, 0.33, -0.478);
     backDecalMesh.rotation.y = Math.PI;
     floatGroup.add(backDecalMesh);
 
@@ -1393,10 +1388,13 @@
     function applyDecalScale() {
       const target = getActiveDecal();
       if (!target) return;
-      const baseScale = (currentDecalKey === 'logo') ? { x: 0.9, y: 0.615 } : { x: 1.0, y: 1.0 };
+      let baseScale = { x: 1.0, y: 1.0 };
+      if (target === decalMesh && currentDecalKey === 'logo') {
+        baseScale = { x: 1.0, y: 1.0 / 1.2447 };
+      }
       target.scale.set(baseScale.x * currentDecalScale, baseScale.y * currentDecalScale, 1.0);
       if (gizmoGroup) {
-        gizmoGroup.scale.set(currentDecalScale, currentDecalScale, 1.0);
+        gizmoGroup.scale.set(baseScale.x * currentDecalScale, baseScale.y * currentDecalScale, 1.0);
       }
     }
 
@@ -1407,8 +1405,8 @@
 
     // Apparel Decal Positioning Handler (Cotton Combed 24s/30s Flagship T-Shirt)
     function updateApparelPositions() {
-      decalMesh.position.set(0, 0.30, 0.466);
-      backDecalMesh.position.set(0, 0.35, -0.485);
+      decalMesh.position.set(0, 0.28, 0.460);
+      backDecalMesh.position.set(0, 0.33, -0.478);
       applyDecalScale();
       if (typeof updateGizmoPosition === 'function') {
         updateGizmoPosition();
@@ -1727,7 +1725,7 @@
       
       const coordsText = document.getElementById('gizmo-coords-text');
       if (coordsText) {
-        const yBase = activePlacement === 'front' ? 0.30 : 0.35;
+        const yBase = activePlacement === 'front' ? 0.28 : 0.33;
         const xCm = (target.position.x * 50).toFixed(1);
         const yCm = ((target.position.y - yBase) * 50).toFixed(1);
         const xSign = xCm > 0 ? '+' : '';
@@ -1739,7 +1737,7 @@
     window.resetDecalPosition = function() {
       const target = getActiveDecal();
       if (!target) return;
-      const targetY = activePlacement === 'front' ? 0.30 : 0.35;
+      const targetY = activePlacement === 'front' ? 0.28 : 0.33;
       gsap.to(target.position, {
         x: 0,
         y: targetY,
@@ -1757,14 +1755,17 @@
       if (placement === 'front') {
         if (btnF) btnF.className = "px-3 py-1 rounded-md bg-blue-600 text-white font-semibold text-xs shadow-sm transition";
         if (btnB) btnB.className = "px-3 py-1 rounded-md text-slate-600 hover:text-slate-900 text-xs transition";
-        gsap.to(camera.position, { x: 0, y: 0.1, z: 3.7, duration: 0.8, ease: 'power2.inOut' });
+        gsap.to(camera.position, { x: 0, y: 0.10, z: 4.4, duration: 0.8, ease: 'power2.inOut' });
+        gsap.to(modelGroup.position, { x: 0, y: -0.08, z: 0, duration: 0.8, ease: 'power2.inOut' });
         gsap.to(modelGroup.rotation, { x: 0, y: 0, z: 0, duration: 0.8, ease: 'power2.inOut' });
       } else {
         if (btnB) btnB.className = "px-3 py-1 rounded-md bg-blue-600 text-white font-semibold text-xs shadow-sm transition";
         if (btnF) btnF.className = "px-3 py-1 rounded-md text-slate-600 hover:text-slate-900 text-xs transition";
-        gsap.to(camera.position, { x: 0, y: 0.1, z: 3.7, duration: 0.8, ease: 'power2.inOut' });
+        gsap.to(camera.position, { x: 0, y: 0.10, z: 4.4, duration: 0.8, ease: 'power2.inOut' });
+        gsap.to(modelGroup.position, { x: 0, y: -0.08, z: 0, duration: 0.8, ease: 'power2.inOut' });
         gsap.to(modelGroup.rotation, { x: 0, y: Math.PI, z: 0, duration: 0.8, ease: 'power2.inOut' });
       }
+      applyDecalScale();
       updateGizmoPosition();
     };
 
@@ -1883,21 +1884,13 @@
     });
 
     window.resetModelToCenter = function() {
-      gsap.to(camera.position, { x: 0, y: 0.1, z: 3.7, duration: 0.8, ease: 'power2.inOut' });
+      gsap.to(camera.position, { x: 0, y: 0.10, z: 4.4, duration: 0.8, ease: 'power2.inOut' });
       gsap.to(lookAtTarget, { x: 0, y: 0, z: 0, duration: 0.8, ease: 'power2.inOut' });
-      gsap.to(modelGroup.position, { x: 0, y: -0.14, z: 0, duration: 0.8, ease: 'power2.inOut' });
+      gsap.to(modelGroup.position, { x: 0, y: -0.08, z: 0, duration: 0.8, ease: 'power2.inOut' });
       gsap.to(modelGroup.rotation, { x: 0, y: 0, z: 0, duration: 0.8, ease: 'power2.inOut' });
       if (controls) controls.target.set(0, 0, 0);
       window.setDesignPlacement('front');
       window.resetDecalPosition();
-    };
-
-    window.resetModelToCenter = function() {
-      gsap.to(camera.position, { x: 0, y: 0.1, z: 3.7, duration: 0.8, ease: 'power2.inOut' });
-      gsap.to(lookAtTarget, { x: 0, y: 0, z: 0, duration: 0.8, ease: 'power2.inOut' });
-      gsap.to(modelGroup.position, { x: 0, y: -0.14, z: 0, duration: 0.8, ease: 'power2.inOut' });
-      gsap.to(modelGroup.rotation, { x: 0, y: 0, z: 0, duration: 0.8, ease: 'power2.inOut' });
-      if (controls) controls.target.set(0, 0, 0);
     };
 
     // -------------------------------------------------------------
@@ -1946,6 +1939,13 @@
     // RENDER LOOP (SUBTLE GENTLE SWAY, NEVER ROTATES AWAY)
     // -------------------------------------------------------------
     const clock = new THREE.Clock();
+    const _wPosF = new THREE.Vector3();
+    const _wPosB = new THREE.Vector3();
+    const _vFront = new THREE.Vector3();
+    const _vBack = new THREE.Vector3();
+    const _camDirF = new THREE.Vector3();
+    const _camDirB = new THREE.Vector3();
+
     function animate() {
       requestAnimationFrame(animate);
       const elapsedTime = clock.getElapsedTime();
@@ -1963,6 +1963,21 @@
         }
       } else if (controls.enabled) {
         controls.update();
+      }
+
+      // Dynamic Decal Orientation Culling (Parity with Kaos Kami Web Engine)
+      // Automatically hides decals facing away from camera, preventing bleed-through & z-fighting
+      if (decalMesh && camera) {
+        decalMesh.getWorldPosition(_wPosF);
+        decalMesh.getWorldDirection(_vFront);
+        _camDirF.subVectors(camera.position, _wPosF).normalize();
+        decalMesh.visible = _vFront.dot(_camDirF) > 0.05;
+      }
+      if (backDecalMesh && camera) {
+        backDecalMesh.getWorldPosition(_wPosB);
+        backDecalMesh.getWorldDirection(_vBack);
+        _camDirB.subVectors(camera.position, _wPosB).normalize();
+        backDecalMesh.visible = _vBack.dot(_camDirB) > 0.05;
       }
 
       renderer.render(scene, camera);
