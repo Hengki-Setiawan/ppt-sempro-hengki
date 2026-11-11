@@ -1,0 +1,16 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "vscode.html-language-features",
+  "files.associations": {
+    "*.html": "html"
+  },
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "javascript": "javascript"
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "html": "html"
+  }
+}
+
