@@ -676,53 +676,54 @@
       <!-- SLIDE 12: PENGUMPULAN & ANALISIS DATA (BAB III.G-J)       -->
       <!-- ========================================================= -->
       <section id="slide-11" class="slide-layer flex flex-col justify-center w-full h-full">
-        <div class="ml-auto w-full max-w-lg lg:max-w-xl space-y-3 pl-2 sm:pl-4">
+        <div class="ml-auto w-full max-w-lg lg:max-w-xl space-y-3.5 pl-2 sm:pl-4">
           <div class="slide-reveal">
-            <span class="text-[11px] font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Pengumpulan &amp; Analisis Data</span>
-            <h2 class="text-xl sm:text-2xl lg:text-[26px] font-extrabold text-slate-900 mt-0.5 leading-tight">Teknik Pengumpulan &amp; Rumus Evaluasi</h2>
-            <p class="text-xs sm:text-[12.5px] text-slate-600 mt-0.5">Status Proposal: seluruh instrumen pengujian masih berupa rancangan (belum diuji).</p>
+            <span class="text-[11px] font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Pengumpulan &amp; Analisis Data (Rencana)</span>
+            <h2 class="text-xl sm:text-2xl lg:text-[26px] font-extrabold text-slate-900 mt-0.5 leading-tight">Teknik Pengumpulan &amp; Uji Kelayakan</h2>
+            <p class="text-[12.5px] sm:text-[13px] text-slate-600 mt-0.5">Seluruh instrumen pengujian masih berupa rancangan rencana sebelum sistem diuji.</p>
           </div>
 
-          <div class="slide-reveal grid grid-cols-4 gap-2.5 py-2.5 border-y border-slate-300 text-[11.5px]">
+          <div class="slide-reveal grid grid-cols-2 sm:grid-cols-4 gap-3 py-2.5 border-y border-slate-300 text-xs sm:text-[12.5px]">
             <div>
-              <strong class="font-mono text-blue-900 block">1. Wawancara</strong>
-              <span class="text-slate-700">Terstruktur pemilik</span>
+              <strong class="text-blue-900 block">1. Wawancara</strong>
+              <span class="text-slate-700 leading-snug">Pemilik bengkel</span>
             </div>
-            <div class="border-l border-slate-200 pl-2.5">
-              <strong class="font-mono text-slate-900 block">2. Observasi</strong>
-              <span class="text-slate-700">Alur kerja bengkel</span>
+            <div class="sm:border-l sm:border-slate-200 sm:pl-3">
+              <strong class="text-slate-900 block">2. Observasi</strong>
+              <span class="text-slate-700 leading-snug">Alur kerja manual</span>
             </div>
-            <div class="border-l border-slate-200 pl-2.5">
-              <strong class="font-mono text-blue-900 block">3. Kuesioner</strong>
-              <span class="text-slate-700">10 butir SUS (10 user)</span>
+            <div class="sm:border-l sm:border-slate-200 sm:pl-3">
+              <strong class="text-blue-900 block">3. Kuesioner</strong>
+              <span class="text-slate-700 leading-snug">10 konsumen (SUS)</span>
             </div>
-            <div class="border-l border-slate-200 pl-2.5">
-              <strong class="font-mono text-slate-900 block">4. Dokumentasi</strong>
-              <span class="text-slate-700">Data Shopee &amp; nota</span>
+            <div class="sm:border-l sm:border-slate-200 sm:pl-3">
+              <strong class="text-slate-900 block">4. Dokumentasi</strong>
+              <span class="text-slate-700 leading-snug">Data Shopee &amp; nota</span>
             </div>
           </div>
 
-          <div class="slide-reveal space-y-2.5 text-xs sm:text-[12.5px]">
+          <div class="slide-reveal space-y-3 text-[12.5px] sm:text-[13px]">
             <div class="border-l-2 border-slate-400 pl-3.5 py-0.5">
-              <strong class="text-slate-900 block">A. Analisis Kualitatif &amp; Perancangan</strong>
-              <p class="text-slate-700 leading-snug">Reduksi, penyajian, &amp; kesimpulan (Miles, Huberman, &amp; Saldana, 2014) ke diagram UML &amp; kalibrasi Three.js <em>DecalGeometry</em>.</p>
+              <strong class="text-slate-900 block">A. Analisis Kebutuhan &amp; Perancangan Sistem</strong>
+              <p class="text-slate-700 leading-snug mt-0.5">Menyaring data wawancara &amp; observasi (Miles dkk., 2014) menjadi diagram alur sistem (<strong>UML</strong>) serta batas cetak <strong>30×35 cm</strong>.</p>
             </div>
 
             <div class="border-l-2 border-blue-900 pl-3.5 py-0.5">
-              <strong class="text-blue-900 block">B. Uji Fungsional Black-Box (Equivalence Partitioning · Wajib 100%)</strong>
-              <p class="font-mono text-xs sm:text-[12.5px] font-bold text-slate-900 mt-0.5">Validitas (%) = (Skenario Valid &divide; 15) &times; 100%</p>
+              <strong class="text-blue-900 block">B. Uji Kelayakan Fungsi (Black-Box · Wajib 100% Valid)</strong>
+              <p class="text-slate-700 leading-snug mt-0.5">Menguji 15 skenario fitur utama: <span class="font-mono font-semibold text-slate-900">Validitas = (Valid &divide; 15) &times; 100%</span></p>
             </div>
 
-            <div class="border-l-2 border-blue-900 pl-3.5 py-0.5 space-y-1.5">
-              <strong class="text-blue-900 block">C. Uji Kebergunaan SUS (Brooke, 1996 · Target &ge; 70,0 Acceptable)</strong>
-              <p class="font-mono text-xs font-bold text-slate-900 bg-slate-100 px-3 py-1 border border-slate-200">
-                Skor SUS = [ &Sigma;(Butir Ganjil &minus; 1) + &Sigma;(5 &minus; Butir Genap) ] &times; 2,5
+            <div class="border-l-2 border-blue-900 pl-3.5 py-0.5 space-y-2">
+              <strong class="text-blue-900 block">C. Uji Kemudahan Pengguna (SUS · Target Skor &ge; 70,0)</strong>
+              <p class="text-slate-700 leading-snug">Menilai 10 pernyataan skala 1–5 oleh 10 konsumen (Brooke, 1996):</p>
+              <p class="font-mono text-xs sm:text-[12.5px] font-bold text-slate-900 bg-slate-100 px-3 py-1.5 border border-slate-200">
+                Skor SUS = [ &Sigma;(Skor Ganjil &minus; 1) + &Sigma;(5 &minus; Skor Genap) ] &times; 2,5
               </p>
-              <div class="grid grid-cols-4 border border-slate-200 divide-x divide-slate-200 text-[11px] font-mono text-center bg-white">
-                <div class="py-1 text-slate-600">&lt; 51 Poor</div>
-                <div class="py-1 text-slate-700">51–67,9 OK</div>
-                <div class="py-1 bg-blue-900 text-white font-bold">68–80,3 Good</div>
-                <div class="py-1 text-slate-800">&gt; 80,3 Best</div>
+              <div class="grid grid-cols-4 border border-slate-200 divide-x divide-slate-200 text-[11.5px] font-semibold text-center bg-white">
+                <div class="py-1.5 text-slate-600">&lt; 51 Kurang</div>
+                <div class="py-1.5 text-slate-700">51–67,9 Cukup</div>
+                <div class="py-1.5 bg-blue-900 text-white">68–80,3 Baik</div>
+                <div class="py-1.5 text-slate-800">&gt; 80,3 Sangat Baik</div>
               </div>
             </div>
           </div>
