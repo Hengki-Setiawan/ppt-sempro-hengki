@@ -173,13 +173,12 @@
     class="fixed top-6 right-8 z-30 font-mono text-xs font-semibold text-slate-400 select-none pointer-events-none tracking-widest flex items-center space-x-1.5">
     <span id="slide-num-current" class="text-blue-900 font-bold text-sm">01</span>
     <span class="text-slate-300">/</span>
-    <span id="slide-num-total" class="text-slate-400">13</span>
+    <span id="slide-num-total" class="text-slate-400">14</span>
   </div>
 
-  <!-- Invisible Edge Click Zones for Presenter Clicker / Touch -->
+  <!-- Invisible Edge Click Zones for Presenter Clicker / Touch (no native browser tooltip!) -->
   <div id="click-zone-prev"
-    class="fixed left-0 top-0 bottom-0 w-[10vw] z-30 cursor-w-resize opacity-0 hover:opacity-100 transition-opacity flex items-center justify-start pl-6 pointer-events-auto"
-    title="Klik untuk Kembali (← / Backspace)">
+    class="fixed left-0 top-0 bottom-0 w-[10vw] z-30 cursor-w-resize opacity-0 hover:opacity-100 transition-opacity flex items-center justify-start pl-6 pointer-events-auto">
     <div
       class="p-2 rounded-full bg-white/80 shadow border border-slate-200/60 text-slate-400 hover:text-slate-800 transition">
       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -188,8 +187,7 @@
     </div>
   </div>
   <div id="click-zone-next"
-    class="fixed right-0 top-0 bottom-0 w-[10vw] z-30 cursor-e-resize opacity-0 hover:opacity-100 transition-opacity flex items-center justify-end pr-6 pointer-events-auto"
-    title="Klik untuk Lanjut (Space / →)">
+    class="fixed right-0 top-0 bottom-0 w-[10vw] z-30 cursor-e-resize opacity-0 hover:opacity-100 transition-opacity flex items-center justify-end pr-6 pointer-events-auto">
     <div
       class="p-2 rounded-full bg-white/80 shadow border border-slate-200/60 text-slate-400 hover:text-blue-900 transition">
       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -213,480 +211,518 @@
       <!-- SLIDE 01: COVER & IDENTITAS AKADEMIK + SLOT PENGUJI       -->
       <!-- ========================================================= -->
       <section id="slide-0" class="slide-layer active flex flex-col justify-center w-full h-full">
-        <div class="w-full max-w-lg lg:max-w-xl space-y-5 pr-2 sm:pr-4 border-l-2 border-blue-900 pl-5 sm:pl-6">
-          <div class="slide-reveal flex items-center space-x-3.5">
+        <div class="w-full max-w-lg lg:max-w-xl space-y-4 pr-2 sm:pr-4 border-l-2 border-blue-900 pl-5 sm:pl-6">
+          <div class="slide-reveal flex items-center space-x-3">
             <img src="public/images/logo_unm_transparent_color.png" alt="Logo UNM"
-              class="h-11 sm:h-12 w-auto object-contain"
+              class="h-10 sm:h-11 w-auto object-contain"
               onerror="this.src='public/images/logo_unm_transparent_white.png'">
-            <div class="border-l border-slate-300 pl-3.5">
-              <h2 class="text-sm font-bold tracking-wide uppercase text-slate-900">Universitas Negeri Makassar</h2>
-              <p class="text-xs text-slate-600 font-medium">FEB · Program Studi S1 Bisnis Digital</p>
+            <div class="border-l border-slate-300 pl-3">
+              <h2 class="text-xs sm:text-[13px] font-bold tracking-wide uppercase text-slate-900">Universitas Negeri Makassar</h2>
+              <p class="text-[11px] sm:text-xs text-slate-600 font-medium">Fakultas Ekonomi dan Bisnis · Prodi S1 Bisnis Digital</p>
             </div>
           </div>
 
-          <div class="slide-reveal space-y-2">
-            <span class="text-xs font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">SEMINAR PROPOSAL SKRIPSI · 2026</span>
-            <h1 class="text-2xl sm:text-[28px] lg:text-[32px] font-black tracking-tight leading-[1.16] text-slate-900">
+          <div class="slide-reveal space-y-1.5">
+            <span class="text-[11px] font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">SEMINAR PROPOSAL PENELITIAN SKRIPSI · 2026</span>
+            <h1 class="text-xl sm:text-2xl lg:text-[28px] font-black tracking-tight leading-[1.18] text-slate-900">
               Rancang Bangun <span class="text-blue-900">E-Commerce Berbasis 3D Interactive Mockup</span> untuk Optimalisasi Pemesanan pada UMKM Kaos Kami
             </h1>
-            <p class="text-sm sm:text-[15px] text-slate-700 leading-relaxed font-normal max-w-lg">
-              Transformasi pemesanan sablon kustom mandiri berbasis grafika 3D WebGL.
+            <p class="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal max-w-lg">
+              Integrasi konfigurator 3D WebGL dan alur pemesanan mandiri untuk mengeliminasi asimetri informasi visual dan beban asistensi manual bengkel konveksi.
             </p>
           </div>
 
-          <div class="slide-reveal pt-4 border-t border-slate-200 grid grid-cols-12 gap-3 text-xs">
+          <div class="slide-reveal pt-3.5 border-t border-slate-200 grid grid-cols-12 gap-3 text-xs">
             <div class="col-span-4">
-              <span class="text-xs font-mono uppercase tracking-wider text-slate-500 block">Peneliti</span>
-              <p class="text-sm font-bold text-slate-900 mt-0.5">Hengki Setiawan</p>
-              <p class="text-xs font-mono text-slate-600">230907501043</p>
+              <span class="text-[11px] font-mono uppercase tracking-wider text-slate-500 block">Peneliti</span>
+              <p class="text-[13px] font-bold text-slate-900 mt-0.5">Hengki Setiawan</p>
+              <p class="text-[11px] font-mono text-slate-600">NIM 230907501043</p>
             </div>
             <div class="col-span-4 border-l border-slate-200 pl-3">
-              <span class="text-xs font-mono uppercase tracking-wider text-slate-500 block">Pembimbing</span>
-              <p class="text-xs text-slate-800 mt-0.5 leading-snug">I. <strong>Syamsu Alam, S.Si., M.Si.</strong></p>
-              <p class="text-xs text-slate-800 mt-0.5 leading-snug">II. <strong>Fadil Muhammad, S.Kel., M.Sc.</strong></p>
+              <span class="text-[11px] font-mono uppercase tracking-wider text-slate-500 block">Pembimbing</span>
+              <p class="text-[11.5px] text-slate-800 mt-0.5 leading-snug">I. <strong>Syamsu Alam, S.Si., M.Si.</strong></p>
+              <p class="text-[11.5px] text-slate-800 mt-0.5 leading-snug">II. <strong>Fadil Muhammad, S.Kel., M.Sc.</strong></p>
             </div>
             <div class="col-span-4 border-l border-slate-200 pl-3">
-              <span class="text-xs font-mono uppercase tracking-wider text-slate-500 block">Penguji</span>
-              <p class="text-xs text-slate-700 mt-0.5 leading-snug">I. Penguji I FEB UNM</p>
-              <p class="text-xs text-slate-700 mt-0.5 leading-snug">II. Penguji II FEB UNM</p>
+              <span class="text-[11px] font-mono uppercase tracking-wider text-slate-500 block">Dewan Penguji</span>
+              <p class="text-[11.5px] text-slate-700 mt-0.5 leading-snug">I. Penguji I FEB UNM</p>
+              <p class="text-[11.5px] text-slate-700 mt-0.5 leading-snug">II. Penguji II FEB UNM</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ========================================================= -->
-      <!-- SLIDE 02: LATAR BELAKANG & PROFIL OBJEK PENELITIAN        -->
+      <!-- SLIDE 02: PETA PAPARAN / AGENDA SEMINAR PROPOSAL          -->
       <!-- ========================================================= -->
       <section id="slide-1" class="slide-layer flex flex-col justify-center w-full h-full">
-        <div class="w-full max-w-lg lg:max-w-xl space-y-4 pr-2 sm:pr-4">
+        <div class="w-full max-w-lg lg:max-w-xl space-y-3.5 pr-2 sm:pr-4">
           <div class="slide-reveal">
-            <span class="text-xs font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Latar Belakang &amp; Objek</span>
-            <h2 class="text-2xl sm:text-[28px] lg:text-[31px] font-extrabold text-slate-900 mt-1 leading-tight">Konteks UMKM &amp; Realitas Mitra</h2>
+            <span class="text-[11px] font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Agenda Paparan</span>
+            <h2 class="text-xl sm:text-2xl lg:text-[26px] font-extrabold text-slate-900 mt-0.5 leading-tight">Sistematika Seminar Proposal</h2>
+            <p class="text-xs sm:text-[12.5px] text-slate-600 mt-0.5">Empat pokok bahasan terstruktur dalam alokasi waktu 12–15 menit.</p>
           </div>
 
-          <div class="slide-reveal grid grid-cols-3 gap-4 py-3.5 border-y border-slate-200">
-            <div>
-              <span class="text-xs font-mono text-slate-600 uppercase block">UMKM Nasional</span>
-              <p class="text-2xl sm:text-[30px] font-black text-slate-900 tracking-tight leading-none mt-1.5">66 <span class="text-blue-900 text-lg font-bold">Juta</span></p>
-              <p class="text-xs text-slate-600 mt-1.5">61,90% PDB RI</p>
+          <div class="slide-reveal divide-y divide-slate-200 border-y border-slate-300 text-xs sm:text-[12.5px]">
+            <div class="py-2.5 grid grid-cols-12 gap-3 items-baseline">
+              <div class="col-span-4 font-bold text-slate-900"><span class="font-mono text-blue-900 mr-1.5">01</span>Pendahuluan</div>
+              <div class="col-span-8 text-slate-700">Realitas mitra Kaos Kami, kesenjangan layanan WhatsApp, batasan istilah, rumusan &amp; tujuan penelitian.</div>
             </div>
-            <div class="border-l border-slate-200 pl-4">
-              <span class="text-xs font-mono text-slate-600 uppercase block">Makassar</span>
-              <p class="text-2xl sm:text-[30px] font-black text-slate-900 tracking-tight leading-none mt-1.5">4.777</p>
-              <p class="text-xs text-slate-600 mt-1.5">15% klaster kreatif</p>
+            <div class="py-2.5 grid grid-cols-12 gap-3 items-baseline">
+              <div class="col-span-4 font-bold text-slate-900"><span class="font-mono text-blue-900 mr-1.5">02</span>Tinjauan Pustaka</div>
+              <div class="col-span-8 text-slate-700">4 pilar teori (SST, Mass Customization, Telepresence, TAM), celah riset terdahulu, kerangka konseptual, &amp; model hipotetik 6 modul.</div>
             </div>
-            <div class="border-l border-slate-200 pl-4">
-              <span class="text-xs font-mono text-slate-600 uppercase block">Konversi Shopee</span>
-              <p class="text-2xl sm:text-[30px] font-black text-blue-900 font-mono tracking-tight leading-none mt-1.5">5,05%</p>
-              <p class="text-xs text-slate-600 mt-1.5">214 order · Rp23,52 Jt</p>
+            <div class="py-2.5 grid grid-cols-12 gap-3 items-baseline">
+              <div class="col-span-4 font-bold text-slate-900"><span class="font-mono text-blue-900 mr-1.5">03</span>Metode Penelitian</div>
+              <div class="col-span-8 text-slate-700">Desain R&amp;D <em>Mixed Methods</em> model <em>Prototyping</em>, subjek <em>purposive</em>, teknik pengumpulan data, &amp; rumus uji Black-Box / SUS.</div>
             </div>
-          </div>
-
-          <div class="slide-reveal space-y-3 text-sm">
-            <div class="border-l-2 border-blue-900 pl-4 py-0.5">
-              <strong class="text-slate-900 block">Mitra Kaos Kami (Kec. Tallo, Makassar)</strong>
-              <p class="text-slate-700 mt-0.5 leading-snug">Dikelola <em>solo-operator</em> dengan mesin press <strong>38×38 cm</strong> (area cetak aman <strong>30×35 cm</strong>).</p>
-            </div>
-
-            <div class="border-l-2 border-slate-400 pl-4 py-0.5">
-              <strong class="text-slate-900 block">Kendala Ekspansi Sablon Kustom</strong>
-              <p class="text-slate-700 mt-0.5 leading-snug"><strong>100%</strong> pesanan masih <em>ready stock</em>; layanan kustom tertahan antrean chat WhatsApp.</p>
+            <div class="py-2.5 grid grid-cols-12 gap-3 items-baseline">
+              <div class="col-span-4 font-bold text-blue-900"><span class="font-mono mr-1.5">04</span>Purwarupa Awal</div>
+              <div class="col-span-8 text-slate-700">Demonstrasi singkat modul WebGL 3D (rotasi 360°, kain Cotton Combed PBR, &amp; pengunci area DTF 30×35 cm).</div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ========================================================= -->
-      <!-- SLIDE 03: MASALAH LAPANGAN (TABEL PERBANDINGAN FORMAL)    -->
+      <!-- SLIDE 03: LATAR BELAKANG & PROFIL OBJEK PENELITIAN        -->
       <!-- ========================================================= -->
       <section id="slide-2" class="slide-layer flex flex-col justify-center w-full h-full">
-        <div class="ml-auto w-full max-w-lg lg:max-w-xl space-y-4 pl-2 sm:pl-4">
+        <div class="w-full max-w-lg lg:max-w-xl space-y-3.5 pr-2 sm:pr-4">
           <div class="slide-reveal">
-            <span class="text-xs font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Identifikasi Masalah</span>
-            <h2 class="text-2xl sm:text-[28px] lg:text-[31px] font-extrabold text-slate-900 mt-1 leading-tight">Kondisi Ideal vs Fakta Mitra</h2>
+            <span class="text-[11px] font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Latar Belakang &amp; Objek</span>
+            <h2 class="text-xl sm:text-2xl lg:text-[26px] font-extrabold text-slate-900 mt-0.5 leading-tight">Konteks Industri UMKM &amp; Realitas Mitra</h2>
+            <p class="text-xs sm:text-[12.5px] text-slate-600 mt-0.5">Kesenjangan potensi pasar sablon kustom dengan kondisi saluran penjualan Kaos Kami.</p>
           </div>
 
-          <div class="slide-reveal overflow-hidden border-y border-slate-300 divide-y divide-slate-200 text-[13.5px]">
-            <div class="grid grid-cols-12 gap-3 py-2 text-xs font-mono font-bold uppercase tracking-wider text-slate-600 bg-slate-100/80 px-2.5">
-              <div class="col-span-3">Aspek</div>
-              <div class="col-span-4">Ideal</div>
-              <div class="col-span-5 text-slate-900">Fakta Lapangan</div>
+          <div class="slide-reveal grid grid-cols-3 gap-4 py-3 border-y border-slate-200">
+            <div>
+              <span class="text-[11px] font-mono text-slate-600 uppercase block">UMKM Nasional</span>
+              <p class="text-2xl sm:text-[27px] font-black text-slate-900 tracking-tight leading-none mt-1">66 <span class="text-blue-900 text-base font-bold">Juta</span></p>
+              <p class="text-[11px] text-slate-600 mt-1">Kontribusi PDB 61,90%</p>
+            </div>
+            <div class="border-l border-slate-200 pl-4">
+              <span class="text-[11px] font-mono text-slate-600 uppercase block">Kota Makassar</span>
+              <p class="text-2xl sm:text-[27px] font-black text-slate-900 tracking-tight leading-none mt-1">4.777</p>
+              <p class="text-[11px] text-slate-600 mt-1">15% klaster dari 32.260 UMKM</p>
+            </div>
+            <div class="border-l border-slate-200 pl-4">
+              <span class="text-[11px] font-mono text-slate-600 uppercase block">Konversi Shopee</span>
+              <p class="text-2xl sm:text-[27px] font-black text-blue-900 font-mono tracking-tight leading-none mt-1">5,05%</p>
+              <p class="text-[11px] text-slate-600 mt-1">214 / 4.234 · Rp23,52 Jt</p>
+            </div>
+          </div>
+
+          <div class="slide-reveal space-y-2.5 text-xs sm:text-[12.5px]">
+            <div class="border-l-2 border-blue-900 pl-3.5 py-0.5">
+              <strong class="text-slate-900 block">Profil Bengkel UMKM Kaos Kami (Jl. Galangan Kapal, Kec. Tallo)</strong>
+              <p class="text-slate-700 mt-0.5 leading-snug">Dikelola oleh pengelola tunggal (<em>solo-operator</em>) dengan mesin pelat pemanas <em>heat press</em> fisik <strong>38×38 cm</strong> (batas cetak aman DTF maks. <strong>30×35 cm</strong>).</p>
             </div>
 
-            <div class="grid grid-cols-12 gap-3 py-2.5 px-2.5 items-center">
-              <div class="col-span-3 font-bold text-slate-900"><span class="text-blue-900 font-mono mr-1">01</span>Visual</div>
-              <div class="col-span-4 text-slate-600">Pratinjau 3D 360°</div>
-              <div class="col-span-5 text-slate-800">Foto 2D datar &rarr; revisi ulang</div>
-            </div>
-
-            <div class="grid grid-cols-12 gap-3 py-2.5 px-2.5 items-center">
-              <div class="col-span-3 font-bold text-slate-900"><span class="text-blue-900 font-mono mr-1">02</span>Layanan</div>
-              <div class="col-span-4 text-slate-600">Order mandiri 24/7</div>
-              <div class="col-span-5 text-slate-800">Chat WA <strong>2–4 jam/klien</strong></div>
-            </div>
-
-            <div class="grid grid-cols-12 gap-3 py-2.5 px-2.5 items-center">
-              <div class="col-span-3 font-bold text-slate-900"><span class="text-blue-900 font-mono mr-1">03</span>Harga</div>
-              <div class="col-span-4 text-slate-600">Hitung luas otomatis</div>
-              <div class="col-span-5 text-slate-800">Ukur &amp; ketik manual</div>
-            </div>
-
-            <div class="grid grid-cols-12 gap-3 py-2.5 px-2.5 items-center">
-              <div class="col-span-3 font-bold text-slate-900"><span class="text-blue-900 font-mono mr-1">04</span>Bayar</div>
-              <div class="col-span-4 text-slate-600">Checkout otomatis</div>
-              <div class="col-span-5 text-slate-800">Jeda balas &rarr; <strong>70,19%</strong> batal</div>
+            <div class="border-l-2 border-slate-400 pl-3.5 py-0.5">
+              <strong class="text-slate-900 block">Ketergantungan Ready Stock &amp; Peluang Kustomisasi</strong>
+              <p class="text-slate-700 mt-0.5 leading-snug">Seluruh 214 pesanan (rating 4,9/5,0) masih <strong>100% produk non-kustom</strong>, padahal survei Deloitte (2015) mencatat 1 dari 5 pembeli bersedia membayar premi +20% untuk produk kustom.</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ========================================================= -->
-      <!-- SLIDE 04: BATASAN ISTILAH (INDEKS FORMAL TANPA BADGE PILL)-->
+      <!-- SLIDE 04: MASALAH LAPANGAN (TABEL PERBANDINGAN FORMAL)    -->
       <!-- ========================================================= -->
       <section id="slide-3" class="slide-layer flex flex-col justify-center w-full h-full">
-        <div class="w-full max-w-lg lg:max-w-xl space-y-3.5 pr-2 sm:pr-4">
+        <div class="ml-auto w-full max-w-lg lg:max-w-xl space-y-3.5 pl-2 sm:pl-4">
           <div class="slide-reveal">
-            <span class="text-xs font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Batasan Operasional</span>
-            <h2 class="text-2xl sm:text-[28px] lg:text-[31px] font-extrabold text-slate-900 mt-1 leading-tight">Ruang Lingkup &amp; Tolok Ukur</h2>
+            <span class="text-[11px] font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Identifikasi Masalah Operasional</span>
+            <h2 class="text-xl sm:text-2xl lg:text-[26px] font-extrabold text-slate-900 mt-0.5 leading-tight">Kondisi Ideal vs Fakta &amp; Dampak Lapangan</h2>
+            <p class="text-xs sm:text-[12.5px] text-slate-600 mt-0.5">Temuan observasi langsung dan wawancara pengelola mitra Kaos Kami.</p>
           </div>
 
-          <div class="slide-reveal divide-y divide-slate-200 border-y border-slate-300 text-[13.5px]">
-            <div class="py-2.5 grid grid-cols-12 gap-3 items-baseline">
-              <div class="col-span-8">
-                <strong class="text-slate-900"><span class="font-mono text-blue-900 mr-1.5">01</span>E-Commerce Web</strong>
-                <p class="text-slate-700 text-[13px] mt-0.5">Katalog, studio 3D, ongkir, &amp; dasbor order</p>
-              </div>
-              <div class="col-span-4 text-right font-mono text-xs font-bold text-slate-800">QRIS &amp; VA</div>
+          <div class="slide-reveal overflow-hidden border-y border-slate-300 divide-y divide-slate-200 text-xs sm:text-[12.5px]">
+            <div class="grid grid-cols-12 gap-3 py-2 text-[11px] font-mono font-bold uppercase tracking-wider text-slate-600 bg-slate-100/80 px-2.5">
+              <div class="col-span-3">Aspek</div>
+              <div class="col-span-4">Kondisi Ideal</div>
+              <div class="col-span-5 text-slate-900">Fakta Lapangan &amp; Dampak</div>
             </div>
 
-            <div class="py-2.5 grid grid-cols-12 gap-3 items-baseline">
-              <div class="col-span-8">
-                <strong class="text-slate-900"><span class="font-mono text-blue-900 mr-1.5">02</span>Studio 3D WebGL</strong>
-                <p class="text-slate-700 text-[13px] mt-0.5">Rotasi 360° &amp; katun 24s/30s dua sisi</p>
-              </div>
-              <div class="col-span-4 text-right font-mono text-xs font-bold text-blue-900">Maks. 30×35 cm</div>
+            <div class="grid grid-cols-12 gap-3 py-2.5 px-2.5 items-start">
+              <div class="col-span-3 font-bold text-slate-900"><span class="text-blue-900 font-mono mr-1">01</span>Visualisasi</div>
+              <div class="col-span-4 text-slate-600 leading-snug">Pratinjau posisi &amp; skala sablon 360° mandiri.</div>
+              <div class="col-span-5 text-slate-800 leading-snug">Hanya foto 2D datar; konsumen ragu sehingga memicu revisi berulang.</div>
             </div>
 
-            <div class="py-2.5 grid grid-cols-12 gap-3 items-baseline">
-              <div class="col-span-8">
-                <strong class="text-slate-900"><span class="font-mono text-blue-900 mr-1.5">03</span>Pemesanan Mandiri</strong>
-                <p class="text-slate-700 text-[13px] mt-0.5">Gantikan asistensi manual chat WhatsApp</p>
-              </div>
-              <div class="col-span-4 text-right font-mono text-xs font-bold text-slate-800">24/7 Mandiri</div>
+            <div class="grid grid-cols-12 gap-3 py-2.5 px-2.5 items-start">
+              <div class="col-span-3 font-bold text-slate-900"><span class="text-blue-900 font-mono mr-1">02</span>Durasi Layanan</div>
+              <div class="col-span-4 text-slate-600 leading-snug">Pemesanan tuntas mandiri tanpa antre chat.</div>
+              <div class="col-span-5 text-slate-800 leading-snug">Asistensi manual WhatsApp menyita waktu <strong>2–4 jam/pelanggan</strong>.</div>
             </div>
 
-            <div class="py-2.5 grid grid-cols-12 gap-3 items-baseline">
-              <div class="col-span-8">
-                <strong class="text-slate-900"><span class="font-mono text-blue-900 mr-1.5">04</span>Uji Fungsional</strong>
-                <p class="text-slate-700 text-[13px] mt-0.5">Verifikasi fungsi via <em>Black-Box Testing</em></p>
-              </div>
-              <div class="col-span-4 text-right font-mono text-xs font-bold text-slate-800">Valid 100%</div>
+            <div class="grid grid-cols-12 gap-3 py-2.5 px-2.5 items-start">
+              <div class="col-span-3 font-bold text-slate-900"><span class="text-blue-900 font-mono mr-1">03</span>Penetapan Harga</div>
+              <div class="col-span-4 text-slate-600 leading-snug">Kalkulasi biaya otomatis berbasis luas desain.</div>
+              <div class="col-span-5 text-slate-800 leading-snug">Pemilik ukur dimensi desain &amp; mengetik rincian biaya secara manual.</div>
             </div>
 
-            <div class="py-2.5 grid grid-cols-12 gap-3 items-baseline">
-              <div class="col-span-8">
-                <strong class="text-slate-900"><span class="font-mono text-blue-900 mr-1.5">05</span>Uji Kebergunaan</strong>
-                <p class="text-slate-700 text-[13px] mt-0.5">Evaluasi pengguna via <em>System Usability Scale</em></p>
-              </div>
-              <div class="col-span-4 text-right font-mono text-xs font-bold text-blue-900">SUS &gt; 70,0</div>
+            <div class="grid grid-cols-12 gap-3 py-2.5 px-2.5 items-start">
+              <div class="col-span-3 font-bold text-slate-900"><span class="text-blue-900 font-mono mr-1">04</span>Transaksi Akhir</div>
+              <div class="col-span-4 text-slate-600 leading-snug">Checkout terpadu dengan ongkir &amp; bayar otomatis.</div>
+              <div class="col-span-5 text-slate-800 leading-snug">Ditangani <em>solo-operator</em>; jeda balas memicu <em>cart abandonment</em> <strong>70,19%</strong>.</div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ========================================================= -->
-      <!-- SLIDE 05: RUMUSAN MASALAH, TUJUAN & MANFAAT PENELITIAN    -->
+      <!-- SLIDE 05: BATASAN ISTILAH & TOLOK UKUR OPERASIONAL        -->
       <!-- ========================================================= -->
       <section id="slide-4" class="slide-layer flex flex-col justify-center w-full h-full">
-        <div class="w-full max-w-lg lg:max-w-xl space-y-4 pr-2 sm:pr-4">
+        <div class="w-full max-w-lg lg:max-w-xl space-y-3 pr-2 sm:pr-4">
           <div class="slide-reveal">
-            <span class="text-xs font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Rumusan, Tujuan &amp; Manfaat</span>
-            <h2 class="text-2xl sm:text-[28px] lg:text-[31px] font-extrabold text-slate-900 mt-1 leading-tight">Fokus &amp; Kontribusi Riset</h2>
+            <span class="text-[11px] font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Batasan Istilah &amp; Spesifikasi</span>
+            <h2 class="text-xl sm:text-2xl lg:text-[26px] font-extrabold text-slate-900 mt-0.5 leading-tight">Definisi Operasional &amp; Tolok Ukur</h2>
+            <p class="text-xs sm:text-[12.5px] text-slate-600 mt-0.5">Penegasan ruang lingkup sistem dan standar teknis produksi bengkel.</p>
           </div>
 
-          <div class="slide-reveal space-y-3 text-[13.5px]">
-            <div class="border-l-2 border-blue-900 pl-4 py-0.5 space-y-1">
-              <span class="font-mono font-bold text-xs text-blue-900 uppercase">01 · Rancang Bangun (Prototyping)</span>
-              <p class="text-slate-900 font-semibold leading-snug">Bagaimana merancang <em>e-commerce</em> 3D untuk pemesanan kustom mandiri?</p>
-              <p class="text-slate-700 leading-snug">&rarr; Menghasilkan sistem WebGL sesuai alur kerja mitra Kaos Kami.</p>
+          <div class="slide-reveal divide-y divide-slate-200 border-y border-slate-300 text-xs sm:text-[12.5px]">
+            <div class="py-2 grid grid-cols-12 gap-3 items-baseline">
+              <div class="col-span-9">
+                <strong class="text-slate-900"><span class="font-mono text-blue-900 mr-1.5">01</span>E-Commerce Mandiri Berbasis Web</strong>
+                <p class="text-slate-700 mt-0.5 leading-snug">Platform web Next.js mandiri mencakup katalog, studio 3D, kalkulator ongkir, dan dasbor pengelola.</p>
+              </div>
+              <div class="col-span-3 text-right font-mono text-[11px] font-bold text-slate-800">QRIS &amp; VA Sandbox</div>
             </div>
 
-            <div class="border-l-2 border-slate-400 pl-4 py-0.5 space-y-1">
-              <span class="font-mono font-bold text-xs text-slate-700 uppercase">02 · Kelayakan &amp; Kebergunaan</span>
-              <p class="text-slate-900 font-semibold leading-snug">Bagaimana validitas fungsi dan kemudahan penggunaan sistem?</p>
-              <p class="text-slate-700 leading-snug">&rarr; Mengukur validitas <strong>Black-Box 100%</strong> dan skor <strong>SUS &gt; 70,0</strong>.</p>
+            <div class="py-2 grid grid-cols-12 gap-3 items-baseline">
+              <div class="col-span-9">
+                <strong class="text-slate-900"><span class="font-mono text-blue-900 mr-1.5">02</span>3D Interactive Mockup WebGL</strong>
+                <p class="text-slate-700 mt-0.5 leading-snug">Visualisasi Three.js rotasi 360°, kain katun combed 24s/30s, &amp; proyeksi desain depan-belakang.</p>
+              </div>
+              <div class="col-span-3 text-right font-mono text-[11px] font-bold text-blue-900">Maks. 30×35 cm</div>
             </div>
-          </div>
 
-          <div class="slide-reveal pt-3 border-t border-slate-200 grid grid-cols-3 gap-3.5 text-xs">
-            <div>
-              <strong class="font-mono text-blue-900 uppercase block">Teoretis</strong>
-              <p class="text-slate-700 mt-1 leading-snug">Integrasi <em>Telepresence</em>, SST, &amp; TAM.</p>
+            <div class="py-2 grid grid-cols-12 gap-3 items-baseline">
+              <div class="col-span-9">
+                <strong class="text-slate-900"><span class="font-mono text-blue-900 mr-1.5">03</span>Optimalisasi Proses Pemesanan</strong>
+                <p class="text-slate-700 mt-0.5 leading-snug">Transformasi konsultasi manual WhatsApp menjadi layanan transaksi mandiri (<em>self-service technology</em>).</p>
+              </div>
+              <div class="col-span-3 text-right font-mono text-[11px] font-bold text-slate-800">Mandiri 24/7</div>
             </div>
-            <div class="border-l border-slate-200 pl-3">
-              <strong class="font-mono text-slate-900 uppercase block">Praktis</strong>
-              <p class="text-slate-700 mt-1 leading-snug">Pangkas chat WA &amp; cegah salah cetak.</p>
+
+            <div class="py-2 grid grid-cols-12 gap-3 items-baseline">
+              <div class="col-span-9">
+                <strong class="text-slate-900"><span class="font-mono text-blue-900 mr-1.5">04</span>Kelayakan Fungsional Sistem</strong>
+                <p class="text-slate-700 mt-0.5 leading-snug">Pengujian keandalan seluruh tombol transaksi &amp; modul 3D melalui metode <em>Black-Box Testing</em>.</p>
+              </div>
+              <div class="col-span-3 text-right font-mono text-[11px] font-bold text-slate-800">Valid 100%</div>
             </div>
-            <div class="border-l border-slate-200 pl-3">
-              <strong class="font-mono text-slate-800 uppercase block">Kebijakan</strong>
-              <p class="text-slate-700 mt-1 leading-snug">Model digitalisasi konveksi Makassar.</p>
+
+            <div class="py-2 grid grid-cols-12 gap-3 items-baseline">
+              <div class="col-span-9">
+                <strong class="text-slate-900"><span class="font-mono text-blue-900 mr-1.5">05</span>Kebergunaan Antarmuka Sistem</strong>
+                <p class="text-slate-700 mt-0.5 leading-snug">Evaluasi kemudahan penggunaan oleh calon konsumen memakai instrumen <em>System Usability Scale</em>.</p>
+              </div>
+              <div class="col-span-3 text-right font-mono text-[11px] font-bold text-blue-900">SUS &ge; 70,0</div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ========================================================= -->
-      <!-- SLIDE 06: KAJIAN TEORI & IMPLEMENTASINYA DI PENELITIAN    -->
+      <!-- SLIDE 06: RUMUSAN MASALAH, TUJUAN & MANFAAT PENELITIAN    -->
       <!-- ========================================================= -->
       <section id="slide-5" class="slide-layer flex flex-col justify-center w-full h-full">
-        <div class="ml-auto w-full max-w-lg lg:max-w-xl space-y-4 pl-2 sm:pl-4">
-          <div class="slide-reveal">
-            <span class="text-xs font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Landasan Teori</span>
-            <h2 class="text-2xl sm:text-[28px] lg:text-[31px] font-extrabold text-slate-900 mt-1 leading-tight">4 Pilar Teori &amp; Penerapan</h2>
-          </div>
-
-          <div class="slide-reveal divide-y divide-slate-200 border-y border-slate-300 text-[13.5px]">
-            <div class="py-2.5 grid grid-cols-12 gap-3 items-center">
-              <div class="col-span-5">
-                <strong class="text-slate-900 block">Transformasi Digital</strong>
-                <span class="text-xs text-slate-600">Westerman (2014); Verhoef (2021)</span>
-              </div>
-              <div class="col-span-7 text-slate-800 leading-snug">Otomasi alur manual menuju sistem desain-produksi.</div>
-            </div>
-
-            <div class="py-2.5 grid grid-cols-12 gap-3 items-center">
-              <div class="col-span-5">
-                <strong class="text-slate-900 block">E-Commerce &amp; SST</strong>
-                <span class="text-xs text-slate-600">Laudon (2020); Meuter (2000)</span>
-              </div>
-              <div class="col-span-7 text-slate-800 leading-snug">Transaksi mandiri 24/7, kalkulasi ongkir, &amp; QRIS/VA.</div>
-            </div>
-
-            <div class="py-2.5 grid grid-cols-12 gap-3 items-center">
-              <div class="col-span-5">
-                <strong class="text-slate-900 block">Mass Customization</strong>
-                <span class="text-xs text-slate-600">Pine (1993); Salvador (2009)</span>
-              </div>
-              <div class="col-span-7 text-slate-800 leading-snug"><em>Solution space</em> terkunci batas fisik <strong>30×35 cm</strong>.</div>
-            </div>
-
-            <div class="py-2.5 grid grid-cols-12 gap-3 items-center">
-              <div class="col-span-5">
-                <strong class="text-slate-900 block">Telepresence &amp; TAM</strong>
-                <span class="text-xs text-slate-600">Steuer (1992); Kim (2020); Davis (1989)</span>
-              </div>
-              <div class="col-span-7 text-slate-800 leading-snug">Rotasi 360° WebGL membangun keyakinan beli.</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========================================================= -->
-      <!-- SLIDE 07: PENELITIAN TERDAHULU & KEBARUAN (NOVELTY GAP)   -->
-      <!-- ========================================================= -->
-      <section id="slide-6" class="slide-layer flex flex-col justify-center w-full h-full">
         <div class="w-full max-w-lg lg:max-w-xl space-y-3.5 pr-2 sm:pr-4">
           <div class="slide-reveal">
-            <span class="text-xs font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Posisi &amp; Kebaruan Riset</span>
-            <h2 class="text-2xl sm:text-[28px] lg:text-[31px] font-extrabold text-slate-900 mt-1 leading-tight">Celah Studi Terdahulu</h2>
+            <span class="text-[11px] font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Rumusan, Tujuan &amp; Manfaat</span>
+            <h2 class="text-xl sm:text-2xl lg:text-[26px] font-extrabold text-slate-900 mt-0.5 leading-tight">Fokus Pertanyaan &amp; Kontribusi Riset</h2>
+            <p class="text-xs sm:text-[12.5px] text-slate-600 mt-0.5">Keterhubungan 1-ke-1 antara rumusan masalah, tujuan perancangan, dan manfaat.</p>
           </div>
 
-          <div class="slide-reveal divide-y divide-slate-200 border-y border-slate-300 text-[13.5px]">
-            <div class="py-2.5 grid grid-cols-12 gap-3 items-start">
-              <div class="col-span-5">
-                <strong class="text-slate-900 block">3D Objek Statis</strong>
-                <span class="text-xs text-slate-600">Hananto (2024); Surahman (2020)</span>
-              </div>
-              <div class="col-span-7 text-slate-700 leading-snug">Pajangan statis tanpa unggah desain &amp; tarif otomatis.</div>
+          <div class="slide-reveal space-y-2.5 text-xs sm:text-[12.5px]">
+            <div class="border-l-2 border-blue-900 pl-3.5 py-0.5 space-y-1">
+              <span class="font-mono font-bold text-[11px] text-blue-900 uppercase">RM 01 &rarr; Tujuan 01 · Rancang Bangun Sistem</span>
+              <p class="text-slate-900 font-semibold leading-snug">Bagaimana rancang bangun sistem <em>e-commerce</em> berbasis <em>3D interactive mockup</em> untuk memfasilitasi pemesanan sablon kustom secara mandiri?</p>
+              <p class="text-slate-700 leading-snug">&rarr; <strong>Tujuan:</strong> Menghasilkan rancangan dan purwarupa <em>e-commerce</em> 3D mandiri sesuai proses bisnis UMKM Kaos Kami.</p>
             </div>
 
-            <div class="py-2.5 grid grid-cols-12 gap-3 items-start">
-              <div class="col-span-5">
-                <strong class="text-slate-900 block">Sablon 2D Datar</strong>
-                <span class="text-xs text-slate-600">Luthfi &amp; Asmunin (2021)</span>
-              </div>
-              <div class="col-span-7 text-slate-700 leading-snug">Kanvas 2D rentan salah persepsi pada lekuk kaos.</div>
-            </div>
-
-            <div class="py-2.5 grid grid-cols-12 gap-3 items-start">
-              <div class="col-span-5">
-                <strong class="text-slate-900 block">Ritel Jadi WebGL</strong>
-                <span class="text-xs text-slate-600">Hamzaturrazak (2024); Hwangbo (2020)</span>
-              </div>
-              <div class="col-span-7 text-slate-700 leading-snug">Belum menyentuh alur produksi sablon kustom UMKM.</div>
+            <div class="border-l-2 border-slate-400 pl-3.5 py-0.5 space-y-1">
+              <span class="font-mono font-bold text-[11px] text-slate-700 uppercase">RM 02 &rarr; Tujuan 02 · Evaluasi Kelayakan &amp; Kebergunaan</span>
+              <p class="text-slate-900 font-semibold leading-snug">Bagaimana hasil kelayakan fungsional dan kebergunaan antarmuka sistem <em>e-commerce</em> 3D bagi UMKM Kaos Kami?</p>
+              <p class="text-slate-700 leading-snug">&rarr; <strong>Tujuan:</strong> Menganalisis validitas fungsional (15 skenario <em>Black-Box</em> 100%) dan tingkat kebergunaan (<em>SUS</em> &ge; 70,0).</p>
             </div>
           </div>
 
-          <div class="slide-reveal border-l-2 border-blue-900 bg-slate-100/80 pl-4 pr-3 py-2.5">
-            <span class="text-xs font-mono font-bold text-blue-900 uppercase tracking-wider block">Kebaruan Penelitian Ini</span>
-            <p class="text-[13.5px] text-slate-800 mt-0.5 leading-snug">
-              <strong>Studio 3D dua sisi</strong> + kunci pelat <strong>38×38 cm (maks. 30×35 cm)</strong> + kalkulator &amp; <strong>QRIS/VA</strong> mandiri.
-            </p>
+          <div class="slide-reveal pt-3 border-t border-slate-200 grid grid-cols-3 gap-3 text-xs">
+            <div>
+              <strong class="font-mono text-[11px] text-blue-900 uppercase block">Manfaat Teoretis</strong>
+              <p class="text-slate-700 mt-0.5 leading-snug">Memperkaya kajian integrasi <em>Telepresence</em>, SST, &amp; <em>Mass Customization</em> pada UMKM.</p>
+            </div>
+            <div class="border-l border-slate-200 pl-3">
+              <strong class="font-mono text-[11px] text-slate-900 uppercase block">Manfaat Praktis</strong>
+              <p class="text-slate-700 mt-0.5 leading-snug">Memangkas beban konsultasi chat WhatsApp mitra &amp; mencegah kesalahan cetak desain.</p>
+            </div>
+            <div class="border-l border-slate-200 pl-3">
+              <strong class="font-mono text-[11px] text-slate-800 uppercase block">Manfaat Kebijakan</strong>
+              <p class="text-slate-700 mt-0.5 leading-snug">Referensi model digitalisasi UMKM konveksi Makassar bagi Dinas Koperasi &amp; UKM.</p>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- ========================================================= -->
-      <!-- SLIDE 08: KERANGKA KONSEPTUAL (ASSET 3D WEBGL DI KANAN)   -->
+      <!-- SLIDE 07: KAJIAN TEORI & IMPLEMENTASINYA DI PENELITIAN    -->
+      <!-- ========================================================= -->
+      <section id="slide-6" class="slide-layer flex flex-col justify-center w-full h-full">
+        <div class="ml-auto w-full max-w-lg lg:max-w-xl space-y-3 pl-2 sm:pl-4">
+          <div class="slide-reveal">
+            <span class="text-[11px] font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Tinjauan Pustaka</span>
+            <h2 class="text-xl sm:text-2xl lg:text-[26px] font-extrabold text-slate-900 mt-0.5 leading-tight">4 Pilar Teori &amp; Penerapannya</h2>
+            <p class="text-xs sm:text-[12.5px] text-slate-600 mt-0.5">Konsep ahli dan cara penerapannya ke dalam fitur sistem Kaos Kami.</p>
+          </div>
+
+          <div class="slide-reveal divide-y divide-slate-200 border-y border-slate-300 text-xs sm:text-[12.5px]">
+            <div class="py-2 grid grid-cols-12 gap-3 items-start">
+              <div class="col-span-5">
+                <strong class="text-slate-900 block">Transformasi Digital</strong>
+                <span class="text-[11px] text-slate-600">Westerman et al. (2014); Verhoef et al. (2021)</span>
+              </div>
+              <div class="col-span-7 text-slate-700 leading-snug">Teknologi merombak alur manual <em>solo-operator</em> menjadi proses bisnis otomatis dari desain ke produksi.</div>
+            </div>
+
+            <div class="py-2 grid grid-cols-12 gap-3 items-start">
+              <div class="col-span-5">
+                <strong class="text-slate-900 block">E-Commerce &amp; SST</strong>
+                <span class="text-[11px] text-slate-600">Laudon &amp; Traver (2020); Meuter et al. (2000)</span>
+              </div>
+              <div class="col-span-7 text-slate-700 leading-snug">Layanan transaksi mandiri 24/7 lewat hitung ongkir otomatis dan verifikasi bayar QRIS/VA (BI, 2020).</div>
+            </div>
+
+            <div class="py-2 grid grid-cols-12 gap-3 items-start">
+              <div class="col-span-5">
+                <strong class="text-slate-900 block">Mass Customization</strong>
+                <span class="text-[11px] text-slate-600">Pine (1993); Salvador et al. (2009); Prahalad (2004)</span>
+              </div>
+              <div class="col-span-7 text-slate-700 leading-snug"><em>Solution space</em> dikunci batas fisik <strong>30×35 cm</strong> agar konsumen berkreasi tanpa risiko salah cetak.</div>
+            </div>
+
+            <div class="py-2 grid grid-cols-12 gap-3 items-start">
+              <div class="col-span-5">
+                <strong class="text-slate-900 block">Telepresence &amp; TAM</strong>
+                <span class="text-[11px] text-slate-600">Steuer (1992); Kim et al. (2020); Davis (1989)</span>
+              </div>
+              <div class="col-span-7 text-slate-700 leading-snug">Pratinjau 3D 360° membangun sensasi nyata &amp; persepsi kemudahan (<em>PEOU</em>) untuk memperkuat niat beli.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- SLIDE 08: PENELITIAN TERDAHULU & KEBARUAN (NOVELTY GAP)   -->
       <!-- ========================================================= -->
       <section id="slide-7" class="slide-layer flex flex-col justify-center w-full h-full">
-        <div class="w-full max-w-md lg:max-w-[460px] space-y-4 pr-2 sm:pr-4">
+        <div class="w-full max-w-lg lg:max-w-xl space-y-3 pr-2 sm:pr-4">
           <div class="slide-reveal">
-            <span class="text-xs font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Kerangka Konseptual</span>
-            <h2 class="text-2xl sm:text-[28px] lg:text-[31px] font-extrabold text-slate-900 mt-1 leading-tight">Alur Pemecahan Masalah</h2>
+            <span class="text-[11px] font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Penelitian Terdahulu &amp; Kebaruan</span>
+            <h2 class="text-xl sm:text-2xl lg:text-[26px] font-extrabold text-slate-900 mt-0.5 leading-tight">Posisi Riset &amp; Celah Studi Terdahulu</h2>
+            <p class="text-xs sm:text-[12.5px] text-slate-600 mt-0.5">Sintesis 7 penelitian terdahulu yang relevan untuk memetakan celah sistem.</p>
           </div>
 
-          <div class="slide-reveal divide-y divide-slate-200 border-y border-slate-300 text-[13.5px]">
-            <div class="py-3">
-              <strong class="text-slate-900 block"><span class="font-mono text-blue-900 mr-1.5">01</span>Masalah Mitra</strong>
-              <p class="text-slate-700 mt-0.5 leading-snug">Chat WA <strong>2–4 jam</strong> &amp; foto katalog 2D datar.</p>
+          <div class="slide-reveal divide-y divide-slate-200 border-y border-slate-300 text-xs sm:text-[12.5px]">
+            <div class="py-2 grid grid-cols-12 gap-3 items-start">
+              <div class="col-span-5">
+                <strong class="text-slate-900 block">3D Objek Kaku &amp; Pajangan</strong>
+                <span class="text-[11px] text-slate-600">Hananto et al. (2021, 2024); Surahman (2020)</span>
+              </div>
+              <div class="col-span-7 text-slate-700 leading-snug">Terbatas pada objek furnitur/sandal statis; belum mendukung unggah desain sablon bebas &amp; kalkulasi biaya.</div>
             </div>
-            <div class="py-3">
-              <strong class="text-slate-900 block"><span class="font-mono text-blue-900 mr-1.5">02</span>Intervensi WebGL 3D</strong>
-              <p class="text-slate-700 mt-0.5 leading-snug">Kanvas 360°, kalkulator tarif, &amp; bayar 24/7.</p>
-            </div>
-            <div class="py-3">
-              <strong class="text-slate-900 block"><span class="font-mono text-blue-900 mr-1.5">03</span>Dua Pilar Pengukuran</strong>
-              <p class="text-slate-700 mt-0.5 leading-snug">Batas <strong>30×35 cm</strong> · Black-Box 100% &amp; SUS &ge; 70,0.</p>
-            </div>
-            <div class="py-3">
-              <strong class="text-slate-900 block"><span class="font-mono text-blue-900 mr-1.5">04</span>Optimalisasi Layanan</strong>
-              <p class="text-slate-700 mt-0.5 leading-snug">Pemesanan sablon mandiri bebas antrean manual.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- ========================================================= -->
-      <!-- SLIDE 09: MODEL HIPOTETIK & HALO ARSITEKTUR 3D            -->
-      <!-- ========================================================= -->
-      <section id="slide-8" class="slide-layer flex flex-col justify-center w-full h-full">
-        <div class="w-full max-w-md lg:max-w-[500px] space-y-4 pr-2 sm:pr-4">
-          <div class="slide-reveal">
-            <span class="text-xs font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Model Hipotetik Sistem</span>
-            <h2 class="text-2xl sm:text-[28px] lg:text-[31px] font-extrabold text-slate-900 mt-1 leading-tight">6 Modul Terintegrasi</h2>
-          </div>
+            <div class="py-2 grid grid-cols-12 gap-3 items-start">
+              <div class="col-span-5">
+                <strong class="text-slate-900 block">Kustomisasi Sablon 2D Datar</strong>
+                <span class="text-[11px] text-slate-600">Luthfi &amp; Asmunin (2021)</span>
+              </div>
+              <div class="col-span-7 text-slate-700 leading-snug">Memakai kanvas datar 2D sehingga konsumen rentan salah memproyeksikan letak sablon pada lekuk kaos.</div>
+            </div>
 
-          <div class="slide-reveal grid grid-cols-2 gap-x-5 gap-y-3.5 text-[13.5px] border-y border-slate-300 py-4">
-            <div>
-              <strong class="text-slate-900 block"><span class="font-mono text-blue-900 mr-1">01</span>Katalog Produk</strong>
-              <span class="text-slate-700 text-[13px]">Varian katun 24s/30s &amp; ukuran</span>
-            </div>
-            <div>
-              <strong class="text-blue-900 block"><span class="font-mono mr-1">02</span>Studio 3D (Inti)</strong>
-              <span class="text-slate-700 text-[13px]">WebGL 360° &amp; dua sisi kaos</span>
-            </div>
-            <div>
-              <strong class="text-slate-900 block"><span class="font-mono text-blue-900 mr-1">03</span>Kalkulator Tarif</strong>
-              <span class="text-slate-700 text-[13px]">Luas cetak 30×35 cm &amp; ongkir</span>
-            </div>
-            <div>
-              <strong class="text-slate-900 block"><span class="font-mono text-blue-900 mr-1">04</span>Checkout D2C</strong>
-              <span class="text-slate-700 text-[13px]">Koordinat 3D &amp; QRIS/VA otomatis</span>
-            </div>
-            <div>
-              <strong class="text-slate-900 block"><span class="font-mono text-blue-900 mr-1">05</span>Tracking Order</strong>
-              <span class="text-slate-700 text-[13px]">Cetak &rarr; press 38×38 &rarr; kirim</span>
-            </div>
-            <div>
-              <strong class="text-slate-900 block"><span class="font-mono text-blue-900 mr-1">06</span>Dasbor Admin</strong>
-              <span class="text-slate-700 text-[13px]">Unduh berkas PNG 300 DPI</span>
+            <div class="py-2 grid grid-cols-12 gap-3 items-start">
+              <div class="col-span-5">
+                <strong class="text-slate-900 block">Performa WebGL &amp; Ritel Jadi</strong>
+                <span class="text-[11px] text-slate-600">Hamzaturrazak (2024); Hwangbo &amp; Kim (2020)</span>
+              </div>
+              <div class="col-span-7 text-slate-700 leading-snug">Berfokus pada uji render atau <em>pseudo-360°</em> ritel besar, belum terhubung ke alur produksi UMKM konveksi.</div>
             </div>
           </div>
 
-          <div class="slide-reveal pt-1">
-            <span class="text-xs font-mono font-bold uppercase tracking-wider text-slate-600 block mb-1">Alur Transaksi Konsumen</span>
-            <p class="text-[13.5px] font-semibold text-slate-800">
-              <span class="text-blue-900">1. Pilih Kaos</span> &rarr; <span class="text-blue-900">2. Kustom 3D</span> &rarr; 3. Tarif &rarr; 4. QRIS/VA &rarr; 5. Produksi
+          <div class="slide-reveal border-l-2 border-blue-900 bg-slate-100/80 pl-3.5 pr-3 py-2">
+            <span class="text-[11px] font-mono font-bold text-blue-900 uppercase tracking-wider block">Kebaruan Penelitian Ini (Novelty)</span>
+            <p class="text-xs sm:text-[12.5px] text-slate-800 mt-0.5 leading-snug">
+              Mengintegrasikan <strong>Studio 3D WebGL dua sisi</strong> langsung dengan <strong>pengunci batas pelat pres 38×38 cm (area aman 30×35 cm)</strong>, <strong>kalkulator biaya</strong>, &amp; <strong>checkout sandbox QRIS/VA</strong>.
             </p>
           </div>
         </div>
       </section>
 
       <!-- ========================================================= -->
-      <!-- SLIDE 10: METODE PENELITIAN & ASSET 3D PROTOTYPING LOOP   -->
+      <!-- SLIDE 09: KERANGKA KONSEPTUAL (PENALARAN + 3D KANAN)      -->
       <!-- ========================================================= -->
-      <section id="slide-9" class="slide-layer flex flex-col justify-center w-full h-full">
-        <div class="w-full max-w-md lg:max-w-[460px] space-y-4 pr-2 sm:pr-4">
+      <section id="slide-8" class="slide-layer flex flex-col justify-center w-full h-full">
+        <div class="w-full max-w-md lg:max-w-[465px] space-y-3.5 pr-2 sm:pr-4">
           <div class="slide-reveal">
-            <span class="text-xs font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Metodologi Penelitian</span>
-            <h2 class="text-2xl sm:text-[28px] lg:text-[31px] font-extrabold text-slate-900 mt-1 leading-tight">R&amp;D Model Prototyping</h2>
+            <span class="text-[11px] font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Kerangka Konseptual</span>
+            <h2 class="text-xl sm:text-2xl lg:text-[26px] font-extrabold text-slate-900 mt-0.5 leading-tight">Logika Kausal &amp; Dasar Solusi</h2>
+            <p class="text-xs sm:text-[12.5px] text-slate-600 mt-0.5">Penalaran ilmiah di balik rancangan bagan 3D pada sisi kanan.</p>
           </div>
 
-          <div class="slide-reveal divide-y divide-slate-200 border-y border-slate-300 text-[13.5px]">
-            <div class="py-3">
-              <strong class="text-slate-900 block"><span class="font-mono text-blue-900 mr-1.5">01</span>Jenis &amp; Pendekatan</strong>
-              <p class="text-slate-700 mt-0.5 leading-snug"><strong>R&amp;D</strong> (<em>Exploratory Sequential Mixed Methods</em>).</p>
+          <div class="slide-reveal divide-y divide-slate-200 border-y border-slate-300 text-xs sm:text-[12.5px]">
+            <div class="py-2.5">
+              <strong class="text-slate-900 block">Akar Masalah Operasional</strong>
+              <p class="text-slate-700 mt-0.5 leading-snug">Asistensi WhatsApp (2–4 jam/pesanan) dan pratinjau 2D statis menimbulkan asimetri visual dan menghambat ekspansi sablon kustom.</p>
             </div>
-
-            <div class="py-3">
-              <strong class="text-slate-900 block"><span class="font-mono text-blue-900 mr-1.5">02</span>Mengapa Prototyping?</strong>
-              <p class="text-slate-700 mt-0.5 leading-snug">UI 3D WebGL menuntut validasi ergonomi iteratif sejak awal.</p>
+            <div class="py-2.5">
+              <strong class="text-slate-900 block">Peran Dua Pilar Penopang</strong>
+              <p class="text-slate-700 mt-0.5 leading-snug">Kustomisasi massal mengunci ruang desain aman <strong>30×35 cm</strong>, lalu kelayakannya diukur via <strong>Black-Box 100%</strong> dan <strong>SUS &ge; 70,0</strong>.</p>
             </div>
-
-            <div class="py-3">
-              <strong class="text-slate-900 block"><span class="font-mono text-blue-900 mr-1.5">03</span>Lokasi &amp; Jadwal</strong>
-              <p class="text-slate-700 mt-0.5 leading-snug">Kec. Tallo, Makassar · <strong>Nov 2026 – Jan 2027</strong>.</p>
-            </div>
-
-            <div class="py-3">
-              <strong class="text-slate-900 block"><span class="font-mono text-blue-900 mr-1.5">04</span>Subjek Purposive</strong>
-              <p class="text-slate-700 mt-0.5 leading-snug"><strong>1 Pemilik UMKM</strong> + <strong>10 Konsumen</strong> (Nielsen, 2000).</p>
+            <div class="py-2.5">
+              <strong class="text-slate-900 block">Transformasi via Prototyping</strong>
+              <p class="text-slate-700 mt-0.5 leading-snug">Diadaptasi dari Pressman &amp; Maxim (2015) serta Meuter et al. (2000) untuk mengubah konsultasi manual menjadi layanan mandiri.</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ========================================================= -->
-      <!-- SLIDE 11: TEKNIK PENGUMPULAN & ANALISIS DATA + RUMUS      -->
+      <!-- SLIDE 10: MODEL HIPOTETIK 6 MODUL (BAB II.D PROPOSAL)     -->
       <!-- ========================================================= -->
-      <section id="slide-10" class="slide-layer flex flex-col justify-center w-full h-full">
-        <div class="ml-auto w-full max-w-lg lg:max-w-xl space-y-4 pl-2 sm:pl-4">
+      <section id="slide-9" class="slide-layer flex flex-col justify-center w-full h-full">
+        <div class="w-full max-w-md lg:max-w-[505px] space-y-3.5 pr-2 sm:pr-4">
           <div class="slide-reveal">
-            <span class="text-xs font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Instrumen &amp; Analisis (Rencana)</span>
-            <h2 class="text-2xl sm:text-[28px] lg:text-[31px] font-extrabold text-slate-900 mt-1 leading-tight">Tolok Ukur Pengujian Sistem</h2>
+            <span class="text-[11px] font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Model Hipotetik Sistem</span>
+            <h2 class="text-xl sm:text-2xl lg:text-[26px] font-extrabold text-slate-900 mt-0.5 leading-tight">6 Modul Terintegrasi &amp; Alur Transaksi</h2>
+            <p class="text-xs sm:text-[12.5px] text-slate-600 mt-0.5">Arsitektur konseptual komponen utama sistem sebelum diuji di lapangan.</p>
           </div>
 
-          <div class="slide-reveal grid grid-cols-4 gap-2.5 py-2.5 border-y border-slate-300 text-xs">
+          <div class="slide-reveal grid grid-cols-2 gap-x-5 gap-y-2.5 text-xs sm:text-[12.5px] border-y border-slate-300 py-3">
+            <div>
+              <strong class="text-slate-900 block"><span class="font-mono text-blue-900 mr-1">01</span>Katalog &amp; Varian</strong>
+              <span class="text-slate-700 leading-snug">Katun combed, ukuran baku, &amp; variasi warna dinamis.</span>
+            </div>
+            <div>
+              <strong class="text-blue-900 block"><span class="font-mono mr-1">02</span>Studio Konfigurator 3D</strong>
+              <span class="text-slate-700 leading-snug">WebGL Three.js rotasi 360°, zoom, &amp; pratinjau seketika.</span>
+            </div>
+            <div>
+              <strong class="text-slate-900 block"><span class="font-mono text-blue-900 mr-1">03</span>Validasi Batas DTF</strong>
+              <span class="text-slate-700 leading-snug">Pengunci batas cetak fisik maks. <strong>30,0×35,0 cm</strong> agar aman jahitan.</span>
+            </div>
+            <div>
+              <strong class="text-slate-900 block"><span class="font-mono text-blue-900 mr-1">04</span>Kalkulator Biaya</strong>
+              <span class="text-slate-700 leading-snug">Harga transparan seketika sesuai luas sablon &amp; varian kaos.</span>
+            </div>
+            <div>
+              <strong class="text-slate-900 block"><span class="font-mono text-blue-900 mr-1">05</span>Transaksi Sandbox</strong>
+              <span class="text-slate-700 leading-snug">Payment gateway QRIS &amp; VA (<em>webhook</em>) serta ongkir zonasi.</span>
+            </div>
+            <div>
+              <strong class="text-slate-900 block"><span class="font-mono text-blue-900 mr-1">06</span>Dasbor Pengelola</strong>
+              <span class="text-slate-700 leading-snug">Verifikasi order, unduh berkas siap cetak, &amp; status produksi.</span>
+            </div>
+          </div>
+
+          <div class="slide-reveal pt-0.5">
+            <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-600 block mb-1">Alur Transaksi Konsumen</span>
+            <p class="text-xs sm:text-[12.5px] font-semibold text-slate-800">
+              <span class="text-blue-900">1. Pilih Varian</span> &rarr; <span class="text-blue-900">2. Kustom 3D (30×35 cm)</span> &rarr; 3. Hitung Tarif &rarr; 4. Bayar Sandbox &rarr; 5. Proses Dasbor
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- SLIDE 11: METODE PENELITIAN & PROTOTYPING LOOP 3D         -->
+      <!-- ========================================================= -->
+      <section id="slide-10" class="slide-layer flex flex-col justify-center w-full h-full">
+        <div class="w-full max-w-md lg:max-w-[465px] space-y-3 pr-2 sm:pr-4">
+          <div class="slide-reveal">
+            <span class="text-[11px] font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Metodologi Penelitian</span>
+            <h2 class="text-xl sm:text-2xl lg:text-[26px] font-extrabold text-slate-900 mt-0.5 leading-tight">Desain R&amp;D &amp; Model Prototyping</h2>
+            <p class="text-xs sm:text-[12.5px] text-slate-600 mt-0.5">Pendekatan bertahap dan iteratif untuk rekayasa antarmuka 3D WebGL.</p>
+          </div>
+
+          <div class="slide-reveal divide-y divide-slate-200 border-y border-slate-300 text-xs sm:text-[12.5px]">
+            <div class="py-2">
+              <strong class="text-slate-900 block"><span class="font-mono text-blue-900 mr-1.5">01</span>Jenis &amp; Skema Penelitian</strong>
+              <p class="text-slate-700 mt-0.5 leading-snug"><strong>R&amp;D</strong> (Borg &amp; Gall; Sugiyono) dengan desain <em>Exploratory Sequential Mixed Methods</em> (Creswell, 2018).</p>
+            </div>
+
+            <div class="py-2">
+              <strong class="text-slate-900 block"><span class="font-mono text-blue-900 mr-1.5">02</span>Mengapa Prototyping (Bukan Waterfall)?</strong>
+              <p class="text-slate-700 mt-0.5 leading-snug">Interaksi kanvas 3D bergantung pada ergonomi visual sehingga membutuhkan uji purwarupa berulang sejak desain awal.</p>
+            </div>
+
+            <div class="py-2">
+              <strong class="text-slate-900 block"><span class="font-mono text-blue-900 mr-1.5">03</span>Lokasi, Jadwal, &amp; Pemodelan</strong>
+              <p class="text-slate-700 mt-0.5 leading-snug">Kec. Tallo, Makassar (<strong>Nov 2026 – Jan 2027</strong>) · Dimodelkan ke <strong>UML</strong> (<em>Use Case, Activity, ERD</em>) &amp; Wireframe Next.js + Three.js.</p>
+            </div>
+
+            <div class="py-2">
+              <strong class="text-slate-900 block"><span class="font-mono text-blue-900 mr-1.5">04</span>Subjek Purposive Sampling</strong>
+              <p class="text-slate-700 mt-0.5 leading-snug"><strong>1 Pemilik UMKM</strong> (aturan produksi) + <strong>10 Konsumen</strong> (Nielsen, 2000: 5–10 responden mendeteksi &gt; 80% kendala UI).</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- SLIDE 12: PENGUMPULAN & ANALISIS DATA (BAB III.G-J)       -->
+      <!-- ========================================================= -->
+      <section id="slide-11" class="slide-layer flex flex-col justify-center w-full h-full">
+        <div class="ml-auto w-full max-w-lg lg:max-w-xl space-y-3 pl-2 sm:pl-4">
+          <div class="slide-reveal">
+            <span class="text-[11px] font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Pengumpulan &amp; Analisis Data</span>
+            <h2 class="text-xl sm:text-2xl lg:text-[26px] font-extrabold text-slate-900 mt-0.5 leading-tight">Teknik Pengumpulan &amp; Rumus Evaluasi</h2>
+            <p class="text-xs sm:text-[12.5px] text-slate-600 mt-0.5">Status Proposal: seluruh instrumen pengujian masih berupa rancangan (belum diuji).</p>
+          </div>
+
+          <div class="slide-reveal grid grid-cols-4 gap-2.5 py-2.5 border-y border-slate-300 text-[11.5px]">
             <div>
               <strong class="font-mono text-blue-900 block">1. Wawancara</strong>
-              <span class="text-slate-700">6 butir pemilik</span>
+              <span class="text-slate-700">Terstruktur pemilik</span>
             </div>
             <div class="border-l border-slate-200 pl-2.5">
               <strong class="font-mono text-slate-900 block">2. Observasi</strong>
-              <span class="text-slate-700">5 indikator alur</span>
+              <span class="text-slate-700">Alur kerja bengkel</span>
             </div>
             <div class="border-l border-slate-200 pl-2.5">
-              <strong class="font-mono text-slate-900 block">3. Black-Box</strong>
-              <span class="text-slate-700">15 skenario</span>
+              <strong class="font-mono text-blue-900 block">3. Kuesioner</strong>
+              <span class="text-slate-700">10 butir SUS (10 user)</span>
             </div>
             <div class="border-l border-slate-200 pl-2.5">
-              <strong class="font-mono text-blue-900 block">4. Angket SUS</strong>
-              <span class="text-slate-700">10 butir × 10 user</span>
+              <strong class="font-mono text-slate-900 block">4. Dokumentasi</strong>
+              <span class="text-slate-700">Data Shopee &amp; nota</span>
             </div>
           </div>
 
-          <div class="slide-reveal space-y-3 text-[13.5px]">
+          <div class="slide-reveal space-y-2.5 text-xs sm:text-[12.5px]">
             <div class="border-l-2 border-slate-400 pl-3.5 py-0.5">
-              <strong class="text-slate-900 block">A. Kualitatif &amp; Pemodelan UML</strong>
-              <p class="text-slate-700 leading-snug">Reduksi data (Miles dkk., 2014) &rarr; <em>Use Case, Activity, ERD</em>.</p>
+              <strong class="text-slate-900 block">A. Analisis Kualitatif &amp; Perancangan</strong>
+              <p class="text-slate-700 leading-snug">Reduksi, penyajian, &amp; kesimpulan (Miles, Huberman, &amp; Saldana, 2014) ke diagram UML &amp; kalibrasi Three.js <em>DecalGeometry</em>.</p>
             </div>
 
             <div class="border-l-2 border-blue-900 pl-3.5 py-0.5">
-              <strong class="text-blue-900 block">B. Black-Box Testing (Target: Wajib 100% Valid)</strong>
-              <p class="font-mono text-[13.5px] font-bold text-slate-900 mt-0.5">Validitas = (Skenario Valid &divide; 15) &times; 100%</p>
+              <strong class="text-blue-900 block">B. Uji Fungsional Black-Box (Equivalence Partitioning · Wajib 100%)</strong>
+              <p class="font-mono text-xs sm:text-[12.5px] font-bold text-slate-900 mt-0.5">Validitas (%) = (Skenario Valid &divide; 15) &times; 100%</p>
             </div>
 
-            <div class="border-l-2 border-blue-900 pl-3.5 py-0.5 space-y-2">
-              <strong class="text-blue-900 block">C. Kebergunaan SUS (Brooke, 1996 · Target &gt; 70,0)</strong>
-              <p class="font-mono text-[13px] font-bold text-slate-900 bg-slate-100 px-3 py-1.5 border border-slate-200">
-                SUS = [ &Sigma;(Ganjil &minus; 1) + &Sigma;(5 &minus; Genap) ] &times; 2,5
+            <div class="border-l-2 border-blue-900 pl-3.5 py-0.5 space-y-1.5">
+              <strong class="text-blue-900 block">C. Uji Kebergunaan SUS (Brooke, 1996 · Target &ge; 70,0 Acceptable)</strong>
+              <p class="font-mono text-xs font-bold text-slate-900 bg-slate-100 px-3 py-1 border border-slate-200">
+                Skor SUS = [ &Sigma;(Butir Ganjil &minus; 1) + &Sigma;(5 &minus; Butir Genap) ] &times; 2,5
               </p>
-              <div class="grid grid-cols-4 border border-slate-200 divide-x divide-slate-200 text-xs font-mono text-center bg-white">
-                <div class="py-1.5 text-slate-600">&lt; 51 Poor</div>
-                <div class="py-1.5 text-slate-700">51–67,9 OK</div>
-                <div class="py-1.5 bg-blue-900 text-white font-bold">68–80,3 Good</div>
-                <div class="py-1.5 text-slate-800">&gt; 80,3 Best</div>
+              <div class="grid grid-cols-4 border border-slate-200 divide-x divide-slate-200 text-[11px] font-mono text-center bg-white">
+                <div class="py-1 text-slate-600">&lt; 51 Poor</div>
+                <div class="py-1 text-slate-700">51–67,9 OK</div>
+                <div class="py-1 bg-blue-900 text-white font-bold">68–80,3 Good</div>
+                <div class="py-1 text-slate-800">&gt; 80,3 Best</div>
               </div>
             </div>
           </div>
@@ -694,15 +730,15 @@
       </section>
 
       <!-- ========================================================= -->
-      <!-- SLIDE 12: SIMULASI PURWARUPA AWAL (PROOF-OF-CONCEPT 3D)   -->
+      <!-- SLIDE 13: SIMULASI PURWARUPA AWAL (PROOF-OF-CONCEPT 3D)   -->
       <!-- ========================================================= -->
-      <section id="slide-11"
+      <section id="slide-12"
         class="slide-layer !pointer-events-none flex flex-col justify-between w-full h-full py-5 sm:py-6">
         <div class="slide-reveal flex items-start justify-between gap-4 pr-16 sm:pr-24 pointer-events-auto w-full">
           <div class="min-w-0 flex-1">
-            <span class="text-xs font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Purwarupa Awal · Proof-of-Concept</span>
-            <h2 class="text-2xl sm:text-[28px] lg:text-[31px] font-extrabold text-slate-900 mt-0.5 leading-tight">Simulasi Modul WebGL 3D</h2>
-            <p class="text-sm text-slate-600 mt-0.5">Pratinjau rotasi 360°, material katun PBR, &amp; area aman 30×35 cm.</p>
+            <span class="text-[11px] font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Purwarupa Awal · Proof-of-Concept</span>
+            <h2 class="text-xl sm:text-2xl lg:text-[26px] font-extrabold text-slate-900 mt-0.5 leading-tight">Simulasi Modul WebGL 3D</h2>
+            <p class="text-xs sm:text-[12.5px] text-slate-600 mt-0.5">Uji visual rotasi 360°, material katun combed PBR, &amp; area aman 30×35 cm sebelum iterasi lanjutan.</p>
           </div>
 
           <button onclick="window.resetModelToCenter()" class="shrink-0 whitespace-nowrap px-3.5 py-2 rounded-lg bg-white hover:bg-slate-100 border border-slate-300 text-xs font-semibold text-slate-800 shadow-xs transition mt-1">
@@ -768,58 +804,58 @@
       </section>
 
       <!-- ========================================================= -->
-      <!-- SLIDE 13: PENUTUP, TARGET LUARAN & SESI TANYA JAWAB (Q&A) -->
+      <!-- SLIDE 14: PENUTUP, TARGET LUARAN & SESI TANYA JAWAB (Q&A) -->
       <!-- ========================================================= -->
-      <section id="slide-12" class="slide-layer flex flex-col justify-center w-full h-full py-4 sm:py-6">
-        <div class="w-full max-w-lg lg:max-w-xl space-y-5 pr-2 sm:pr-4 border-l-2 border-blue-900 pl-5 sm:pl-6">
+      <section id="slide-13" class="slide-layer flex flex-col justify-center w-full h-full py-4 sm:py-6">
+        <div class="w-full max-w-lg lg:max-w-xl space-y-4 pr-2 sm:pr-4 border-l-2 border-blue-900 pl-5 sm:pl-6">
           <div class="slide-reveal space-y-1.5">
-            <span class="text-xs font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Target Luaran &amp; Penutup</span>
-            <h1 class="text-4xl sm:text-5xl lg:text-[52px] font-black text-slate-900 tracking-tight leading-[1.05]">
+            <span class="text-[11px] font-mono font-bold uppercase tracking-[0.18em] text-blue-900 block">Target Luaran &amp; Penutup</span>
+            <h1 class="text-4xl sm:text-5xl lg:text-[48px] font-black text-slate-900 tracking-tight leading-[1.05]">
               TERIMA KASIH
             </h1>
-            <p class="text-sm sm:text-[15px] text-slate-700 leading-relaxed font-normal pt-0.5">
-              Mohon arahan serta masukan dari Bapak/Ibu Penguji dan Pembimbing.
+            <p class="text-xs sm:text-[13.5px] text-slate-700 leading-relaxed font-normal pt-0.5">
+              Mohon arahan, kritik, dan masukan konstruktif dari Bapak/Ibu Dewan Penguji serta Pembimbing untuk penyempurnaan pelaksanaan penelitian ini.
             </p>
           </div>
 
-          <div class="slide-reveal grid grid-cols-3 gap-3.5 py-3 border-y border-slate-200 text-xs">
+          <div class="slide-reveal grid grid-cols-3 gap-3.5 py-2.5 border-y border-slate-200 text-xs">
             <div>
-              <strong class="font-mono text-blue-900 block">LUARAN 01</strong>
+              <strong class="font-mono text-[11px] text-blue-900 block">LUARAN 01</strong>
               <strong class="text-slate-900 block mt-0.5">Web E-Commerce 3D</strong>
-              <span class="text-slate-700">Rotasi 360° &amp; 30×35 cm</span>
+              <span class="text-slate-700">6 modul terintegrasi &amp; batas DTF 30×35 cm</span>
             </div>
             <div class="border-l border-slate-200 pl-3">
-              <strong class="font-mono text-slate-900 block">LUARAN 02</strong>
+              <strong class="font-mono text-[11px] text-slate-900 block">LUARAN 02</strong>
               <strong class="text-slate-900 block mt-0.5">Validasi Black-Box</strong>
-              <span class="text-slate-700">Target 15 skenario (100%)</span>
+              <span class="text-slate-700">Target 15 skenario fungsi (100% valid)</span>
             </div>
             <div class="border-l border-slate-200 pl-3">
-              <strong class="font-mono text-blue-900 block">LUARAN 03</strong>
+              <strong class="font-mono text-[11px] text-blue-900 block">LUARAN 03</strong>
               <strong class="text-slate-900 block mt-0.5">Evaluasi SUS</strong>
-              <span class="text-slate-700">Target skor &gt; 70,0 (10 user)</span>
+              <span class="text-slate-700">Target skor &ge; 70,0 pada 10 konsumen</span>
             </div>
           </div>
 
           <div class="slide-reveal grid grid-cols-12 gap-3 text-xs pt-0.5">
             <div class="col-span-4">
-              <span class="text-xs font-mono uppercase tracking-wider text-slate-500 block">Peneliti</span>
-              <p class="text-sm font-bold text-slate-900">Hengki Setiawan</p>
-              <p class="font-mono text-slate-600 text-xs">230907501043</p>
+              <span class="text-[11px] font-mono uppercase tracking-wider text-slate-500 block">Peneliti</span>
+              <p class="text-[13px] font-bold text-slate-900">Hengki Setiawan</p>
+              <p class="font-mono text-slate-600 text-[11px]">NIM 230907501043</p>
             </div>
             <div class="col-span-4 border-l border-slate-200 pl-3">
-              <span class="text-xs font-mono uppercase tracking-wider text-slate-500 block">Pembimbing</span>
-              <p class="text-xs text-slate-800">I. <strong>Syamsu Alam, S.Si., M.Si.</strong></p>
-              <p class="text-xs text-slate-800">II. <strong>Fadil Muhammad, S.Kel., M.Sc.</strong></p>
+              <span class="text-[11px] font-mono uppercase tracking-wider text-slate-500 block">Pembimbing</span>
+              <p class="text-[11.5px] text-slate-800">I. <strong>Syamsu Alam, S.Si., M.Si.</strong></p>
+              <p class="text-[11.5px] text-slate-800">II. <strong>Fadil Muhammad, S.Kel., M.Sc.</strong></p>
             </div>
             <div class="col-span-4 border-l border-slate-200 pl-3">
-              <span class="text-xs font-mono uppercase tracking-wider text-slate-500 block">Penguji</span>
-              <p class="text-xs text-slate-700">I. Penguji I FEB UNM</p>
-              <p class="text-xs text-slate-700">II. Penguji II FEB UNM</p>
+              <span class="text-[11px] font-mono uppercase tracking-wider text-slate-500 block">Penguji</span>
+              <p class="text-[11.5px] text-slate-700">I. Penguji I FEB UNM</p>
+              <p class="text-[11.5px] text-slate-700">II. Penguji II FEB UNM</p>
             </div>
           </div>
 
           <div class="slide-reveal flex items-center justify-between pt-1 text-xs">
-            <span class="font-mono text-slate-600">S1 Bisnis Digital · FEB UNM</span>
+            <span class="font-mono text-slate-600">S1 Bisnis Digital · FEB Universitas Negeri Makassar</span>
             <span class="font-semibold text-slate-900 italic">Wassalamu'alaikum Wr. Wb.</span>
           </div>
         </div>
@@ -908,7 +944,7 @@
       const slidesData = [
         {
           id: 0,
-          section: "SEMINAR PROPOSAL SKRIPSI · S1 BISNIS DIGITAL",
+          section: "COVER · IDENTITAS PROPOSAL",
           title: "Cover & Identitas Akademik Proposal",
           camPos: { x: 0, y: 0.1, z: 4.8 },
           camTarget: { x: 0, y: 0, z: 0 },
@@ -918,14 +954,30 @@
           showGizmo: false,
           showTechFrame: false,
           notes: `
-          <strong class="text-blue-600 font-bold text-xs uppercase tracking-wider block mb-1">Panduan Pembuka Sidang (Sesuai Etika FEB UNM):</strong>
+          <strong class="text-blue-900 font-bold text-xs uppercase tracking-wider block mb-1">Panduan Pembuka Sidang (Etika FEB UNM):</strong>
           <p>"Assalamu'alaikum Wr. Wb. dan selamat pagi. Yang terhormat Bapak/Ibu Dewan Penguji I dan II, serta Pembimbing I Bapak Syamsu Alam, S.Si., M.Si. dan Pembimbing II Bapak Fadil Muhammad, S.Kel., M.Sc. Izin mempresentasikan proposal skripsi saya..."</p>
         `
         },
         {
           id: 1,
+          section: "AGENDA · SISTEMATIKA PAPARAN",
+          title: "Sistematika Paparan Seminar Proposal",
+          camPos: { x: 0, y: 0.12, z: 4.7 },
+          camTarget: { x: 0, y: 0, z: 0 },
+          modelPos: { x: 1.32, y: -0.15, z: 0.1 },
+          modelRot: { x: 0.03, y: 0.35, z: 0 },
+          isInteractive: false,
+          showGizmo: false,
+          showTechFrame: false,
+          notes: `
+          <strong class="text-blue-900 font-bold text-xs uppercase tracking-wider block mb-1">Peta Waktu (Maks. 15 Menit · Tabel 6.1 Panduan UNM 2025):</strong>
+          <p>Sampaikan ringkas bahwa paparan terdiri atas Bab I Pendahuluan (~3 menit), Bab II Tinjauan Pustaka & Model 6 Modul (~4 menit), Bab III Metode & Instrumen (~4 menit), dan Simulasi Purwarupa Awal WebGL 3D (~1 menit).</p>
+        `
+        },
+        {
+          id: 2,
           section: "BAB I · PENDAHULUAN & OBJEK",
-          title: "Konteks Industri UMKM & Profil Objek Kaos Kami",
+          title: "Konteks Industri UMKM & Realitas Mitra",
           camPos: { x: 0, y: 0.12, z: 4.6 },
           camTarget: { x: 0, y: 0, z: 0 },
           modelPos: { x: 1.35, y: -0.15, z: 0.1 },
@@ -934,12 +986,12 @@
           showGizmo: false,
           showTechFrame: false,
           notes: `
-          <strong class="text-blue-600 font-bold text-xs uppercase tracking-wider block mb-1">Poin Latar Belakang & Objek (1 Menit):</strong>
-          <p>Tegaskan kontras makro (66 Juta UMKM, 4.777 klaster kreatif Makassar) vs mikro Shopee Kaos Kami (4.234 pengunjung, 214 pesanan, Rp23,52 Jt, konversi 5,05% yang 100% masih ready stock). Jelaskan profil fisik gerai di Jl. Galangan Kapal, Tallo (solo-operator, mesin pres 38×38 cm).</p>
+          <strong class="text-blue-900 font-bold text-xs uppercase tracking-wider block mb-1">Latar Belakang & Profil Mitra (Bab I.A · Tabel 1.1):</strong>
+          <p>Kontras makro (66 Juta UMKM PDB 61,90%, 4.777 klaster Makassar dari 32.260 UMKM) vs riil Shopee Kaos Kami Jan 2025–Agu 2026 (4.234 pengunjung, 214 pesanan selesai, Rp23,52 Jt, konversi 5,05% yang 100% masih ready stock). Lokasi: Jl. Galangan Kapal, Tallo (solo-operator, mesin pres 38×38 cm).</p>
         `
         },
         {
-          id: 2,
+          id: 3,
           section: "BAB I · IDENTIFIKASI MASALAH",
           title: "Kondisi Ideal vs Fakta & Dampak Lapangan",
           camPos: { x: 0, y: 0.12, z: 4.3 },
@@ -950,14 +1002,14 @@
           showGizmo: false,
           showTechFrame: false,
           notes: `
-          <strong class="text-rose-600 font-bold text-xs uppercase tracking-wider block mb-1">Tabel 1.2 Proposal (Kondisi – Masalah – Dampak):</strong>
-          <p>Tunjukkan 4 kesenjangan riil hasil wawancara pemilik (Muh. Reski Fauzi): foto 2D datar bikin ragu/revisi, chat WhatsApp makan 2–4 jam/pelanggan, harga dihitung manual, dan solo-operator kewalahan sehingga berisiko cart abandonment 70,19% (Baymard 2024).</p>
+          <strong class="text-slate-900 font-bold text-xs uppercase tracking-wider block mb-1">Tabel 1.2 Proposal (Hasil Wawancara Pengelola Muh. Reski Fauzi):</strong>
+          <p>4 masalah inti: foto 2D datar picu revisi, chat WhatsApp makan 2–4 jam/pelanggan, hitung biaya & dimensi manual, dan solo-operator kewalahan sehingga jeda balas memicu cart abandonment 70,19% (Baymard 2024).</p>
         `
         },
         {
-          id: 3,
+          id: 4,
           section: "BAB I · BATASAN ISTILAH",
-          title: "Definisi Operasional & Tolok Ukur Sistem",
+          title: "Definisi Operasional & Tolok Ukur",
           camPos: { x: 0, y: 0.15, z: 4.4 },
           camTarget: { x: 0, y: 0, z: 0 },
           modelPos: { x: 1.48, y: -0.15, z: 0.0 },
@@ -966,14 +1018,14 @@
           showGizmo: false,
           showTechFrame: 'back',
           notes: `
-          <strong class="text-blue-600 font-bold text-xs uppercase tracking-wider block mb-1">Tabel 1.3 Proposal (Bingkai Kalibrasi 3D Aktif di Punggung):</strong>
-          <p>Kaos berputar 180° menampilkan bingkai batas cetak 3D: pelat heat press fisik 38×38 cm dengan area aman DTF maks. 30×35 cm. Tegaskan target Black-Box 100% valid dan SUS > 70,0.</p>
+          <strong class="text-blue-900 font-bold text-xs uppercase tracking-wider block mb-1">Tabel 1.3 Proposal (Bingkai Kalibrasi 3D Aktif di Punggung):</strong>
+          <p>Kaos berputar 180° menampilkan bingkai pelat heat press fisik 38×38 cm dengan area aman DTF maks. 30×35 cm. Tegaskan 5 tolok ukur termasuk target Black-Box 100% valid dan SUS &ge; 70,0.</p>
         `
         },
         {
-          id: 4,
+          id: 5,
           section: "BAB I · RUMUSAN, TUJUAN & MANFAAT",
-          title: "Kesesuaian Masalah, Target, & Manfaat Penelitian",
+          title: "Fokus Pertanyaan & Kontribusi Riset",
           camPos: { x: 0, y: 0.85, z: 4.4 },
           camTarget: { x: 0, y: 0.1, z: 0 },
           modelPos: { x: 1.35, y: -0.28, z: 0.1 },
@@ -982,14 +1034,14 @@
           showGizmo: false,
           showTechFrame: false,
           notes: `
-          <strong class="text-blue-600 font-bold text-xs uppercase tracking-wider block mb-1">Konsistensi 1-to-1 + Bab I.D Manfaat:</strong>
-          <p>RM 1 &amp; Tujuan 1 fokus pada rancang bangun sistem WebGL 3D; RM 2 &amp; Tujuan 2 fokus pada evaluasi kelayakan (Black-Box), usability (SUS), dan optimalisasi pemesanan. Manfaat mencakup ranah teoretis, praktis (mitra &amp; konsumen), serta kebijakan UMKM Makassar.</p>
+          <strong class="text-blue-900 font-bold text-xs uppercase tracking-wider block mb-1">Konsistensi 1-ke-1 (Bab I.B–D hlm. 5–7):</strong>
+          <p>RM 1 & Tujuan 1 fokus pada rancang bangun platform e-commerce 3D; RM 2 & Tujuan 2 fokus pada kelayakan fungsional (Black-Box) dan kebergunaan antarmuka (SUS). Manfaat mencakup teoretis, praktis (mitra & konsumen), serta kebijakan UMKM.</p>
         `
         },
         {
-          id: 5,
-          section: "BAB II · KAJIAN TEORI",
-          title: "4 Pilar Teori & Perannya dalam Sistem",
+          id: 6,
+          section: "BAB II · TINJAUAN PUSTAKA",
+          title: "4 Pilar Teori & Penerapannya",
           camPos: { x: 0, y: -0.32, z: 4.4 },
           camTarget: { x: 0, y: 0.05, z: 0 },
           modelPos: { x: -1.35, y: -0.12, z: 0.1 },
@@ -998,14 +1050,14 @@
           showGizmo: false,
           showTechFrame: false,
           notes: `
-          <strong class="text-blue-600 font-bold text-xs uppercase tracking-wider block mb-1">Teori Ahli &rarr; Penerapan di Riset Ini:</strong>
-          <p>Setiap teori langsung dikaitkan ke fitur nyata: Westerman/Verhoef (otomasi alur), Laudon/Meuter (transaksi mandiri 24/7 + QRIS/VA), Pine/Salvador (solution space 30×35 cm), dan Steuer/Kim/Davis (3D WebGL membangun telepresence &amp; perceived ease of use).</p>
+          <strong class="text-blue-900 font-bold text-xs uppercase tracking-wider block mb-1">Teori Ahli &rarr; Implementasi di Sistem (Bab II.A hlm. 11–14):</strong>
+          <p>Westerman/Verhoef (otomasi alur manual), Laudon/Meuter (SST mandiri 24/7 + QRIS/VA BI 2020), Pine/Salvador/Prahalad (solution space terkunci 30×35 cm), dan Steuer/Kim/Davis (3D telepresence perkuat perceived ease of use & niat beli).</p>
         `
         },
         {
-          id: 6,
+          id: 7,
           section: "BAB II · PENELITIAN TERDAHULU",
-          title: "Posisi Riset & Celah Kebaruan (Novelty Gap)",
+          title: "Posisi Riset & Celah Studi Terdahulu",
           camPos: { x: 0, y: 0.12, z: 4.5 },
           camTarget: { x: 0, y: 0, z: 0 },
           modelPos: { x: 1.35, y: -0.15, z: 0.1 },
@@ -1014,14 +1066,14 @@
           showGizmo: false,
           showTechFrame: 'front',
           notes: `
-          <strong class="text-indigo-600 font-bold text-xs uppercase tracking-wider block mb-1">Tangkisan Kebaruan (Tabel 6.4 Aspek 4 Panduan UNM 2025):</strong>
-          <p>Jika penguji bertanya bedanya dengan web sablon lain: penelitian sebelumnya memakai kanvas 2D datar (Luthfi &amp; Asmunin, 2021) atau objek 3D kaku tanpa upload desain/hitung biaya. Kebaruan kita: Studio 3D WebGL dua sisi + kunci batas fisik pelat press 38×38 cm (maks. 30×35 cm) + checkout mandiri QRIS/VA.</p>
+          <strong class="text-blue-900 font-bold text-xs uppercase tracking-wider block mb-1">Tangkisan Kebaruan (Tabel 2.1 hlm. 15–17 & Panduan UNM Aspek 4):</strong>
+          <p>Penelitian terdahulu berhenti pada objek kaku (Hananto et al., Surahman), kanvas 2D datar (Luthfi & Asmunin 2021), atau uji render ritel besar. Kebaruan kita: Studio 3D WebGL dua sisi + pengunci pelat pres 38×38 cm (30×35 cm) + kalkulator tarif + checkout sandbox QRIS/VA.</p>
         `
         },
         {
-          id: 7,
-          section: "BAB II · KERANGKA KONSEPTUAL",
-          title: "Alur Logis Pemecahan Masalah (Diagram 3D)",
+          id: 8,
+          section: "BAB II.C · KERANGKA KONSEPTUAL",
+          title: "Logika Kausal & Bagan 3D Pemecahan Masalah",
           camPos: { x: 0, y: 0.04, z: 5.0 },
           camTarget: { x: 0, y: 0, z: 0 },
           modelPos: { x: 1.48, y: 0.0, z: 0.0 },
@@ -1029,15 +1081,16 @@
           isInteractive: false,
           showGizmo: false,
           showTechFrame: false,
+          diagramMode: 'kerangka',
           notes: `
-          <strong class="text-blue-900 font-bold text-xs uppercase tracking-wider block mb-1">Gambar 2.1 Proposal (Diagram Arsitektur 3D WebGL):</strong>
-          <p>Menghubungkan masalah mitra &rarr; intervensi e-commerce 3D &rarr; 2 pilar (Kustomisasi Massal &amp; Kelayakan SUS) &rarr; R&amp;D Prototyping &rarr; optimalisasi pemesanan Kaos Kami dalam blok hierarki 3D.</p>
+          <strong class="text-blue-900 font-bold text-xs uppercase tracking-wider block mb-1">Gambar 2.1 Proposal (hlm. 17–18, Adaptasi Pressman & Meuter):</strong>
+          <p>Sisi kiri menjelaskan penalaran kausal (mengapa masalah WhatsApp diselesaikan dengan 2 pilar dan R&D Prototyping), sementara bagan 3D di kanan memvisualisasikan 5 tingkatan alur variabelnya.</p>
         `
         },
         {
-          id: 8,
+          id: 9,
           section: "BAB II.D · MODEL HIPOTETIK",
-          title: "Arsitektur 6 Modul & Alur Transaksi Mandiri",
+          title: "6 Modul Terintegrasi & Alur Transaksi",
           camPos: { x: 0, y: 0.12, z: 4.9 },
           camTarget: { x: 0, y: 0, z: 0 },
           modelPos: { x: 1.66, y: -0.08, z: 0.0 },
@@ -1045,15 +1098,16 @@
           isInteractive: false,
           showGizmo: false,
           showTechFrame: false,
+          showHalo: true,
           notes: `
-          <strong class="text-blue-900 font-bold text-xs uppercase tracking-wider block mb-1">Model Hipotetik (Sesuai Panduan UNM 2025 hlm. 38 &amp; 49):</strong>
-          <p>Menjelaskan 6 modul terintegrasi (dikelilingi halo arsitektur M1–M6 di sekitar objek 3D) dan 5 langkah alur transaksi konsumen sebelum sistem diuji pada tahap penelitian.</p>
+          <strong class="text-blue-900 font-bold text-xs uppercase tracking-wider block mb-1">Model Hipotetik (Sesuai Persis Bab II.D hlm. 18–19 Proposal):</strong>
+          <p>Keenam modul terintegrasi: (1) Katalog & Varian, (2) Studio Konfigurator 3D, (3) Validasi Batas DTF maks. 30,0×35,0 cm, (4) Kalkulator Biaya Otomatis, (5) Transaksi & Pembayaran Sandbox (QRIS/VA + webhook + ongkir zonasi), dan (6) Dasbor Pengelola.</p>
         `
         },
         {
-          id: 9,
+          id: 10,
           section: "BAB III · METODE & DESAIN",
-          title: "R&D Mixed Methods, Subjek & Model Prototyping",
+          title: "Desain R&D & Model Prototyping",
           camPos: { x: 0, y: 0.04, z: 5.0 },
           camTarget: { x: 0, y: 0, z: 0 },
           modelPos: { x: 1.48, y: 0.0, z: 0.0 },
@@ -1061,15 +1115,16 @@
           isInteractive: false,
           showGizmo: false,
           showTechFrame: false,
+          diagramMode: 'prototyping',
           notes: `
-          <strong class="text-blue-900 font-bold text-xs uppercase tracking-wider block mb-1">Kunci Jawaban Metodologi (Bab III.A–D &amp; Gambar 3.1):</strong>
-          <p>Alasan pilih Prototyping (bukan Waterfall): antarmuka 3D butuh validasi ergonomi visual iteratif sejak desain awal. Subjek purposive: 1 Pemilik + 10 Konsumen (Nielsen 2000: 5–10 responden mendeteksi &gt; 80% masalah UI). Pipa 3D lengkung menggambarkan siklus balik jika SUS &lt; 70,0 kembali ke Tahap 2.</p>
+          <strong class="text-blue-900 font-bold text-xs uppercase tracking-wider block mb-1">Bab III.A–F & I (hlm. 20–34 · Gambar 3.1–3.3):</strong>
+          <p>Alasan memilih Prototyping (bukan Waterfall): interaksi antarmuka 3D menuntut validasi ergonomi iteratif. Lokasi: Kec. Tallo, Makassar (Nov 2026–Jan 2027). Pemodelan UML (Use Case, Activity, ERD) + Wireframe Next.js & Three.js. Subjek: 1 Pemilik + 10 Konsumen (Nielsen 2000). Pipa 3D balik aktif jika SUS &lt; 70,0.</p>
         `
         },
         {
-          id: 10,
-          section: "BAB III · PENGUMPULAN & ANALISIS DATA",
-          title: "Instrumen Rencana & Rumus Pengujian Sistem",
+          id: 11,
+          section: "BAB III.G–J · DATA & EVALUASI",
+          title: "Teknik Pengumpulan & Rumus Evaluasi",
           camPos: { x: 0, y: 0.14, z: 4.5 },
           camTarget: { x: -0.2, y: 0, z: 0 },
           modelPos: { x: -1.35, y: -0.15, z: 0.0 },
@@ -1078,14 +1133,14 @@
           showGizmo: false,
           showTechFrame: false,
           notes: `
-          <strong class="text-blue-600 font-bold text-xs uppercase tracking-wider block mb-1">Bab III.G–J (Status Proposal: Belum Diuji):</strong>
-          <p>4 teknik pengumpulan data (wawancara, observasi, Black-Box 15 skenario, SUS 10 butir). Analisis kualitatif Miles-Huberman-Saldana + UML; Black-Box = (Valid/15)×100% wajib 100%; SUS Brooke = [Σ(Ganjil-1)+Σ(5-Genap)]×2,5 dengan target &gt; 70,0 (Grade B Good, Bangor et al., 2008).</p>
+          <strong class="text-blue-900 font-bold text-xs uppercase tracking-wider block mb-1">Bab III.G–J hlm. 29–37 (Status Proposal: Instrumen Rencana):</strong>
+          <p>4 Teknik Pengumpulan Data tepat sesuai Bab III.G: Wawancara, Observasi, Kuesioner SUS, & Dokumentasi (catatan Shopee, foto bengkel, nota manual). Analisis: kualitatif Miles-Huberman-Saldana + UML/DecalGeometry, Black-Box Equivalence Partitioning (15 skenario, wajib 100%), dan SUS Brooke (1996) target &ge; 70,0 Acceptable (Tabel 3.7).</p>
         `
         },
         {
-          id: 11,
-          section: "UJI KELAYAKAN TEKNIS · PURWARUPA AWAL",
-          title: "Simulasi Purwarupa Awal Modul WebGL 3D",
+          id: 12,
+          section: "PURWARUPA AWAL · SIMULASI 3D",
+          title: "Simulasi Modul WebGL 3D",
           camPos: { x: 0, y: 0.10, z: 4.4 },
           camTarget: { x: 0, y: 0, z: 0 },
           modelPos: { x: 0, y: -0.08, z: 0 },
@@ -1094,24 +1149,25 @@
           showGizmo: false,
           showTechFrame: false,
           notes: `
-          <strong class="text-emerald-600 font-bold text-xs uppercase tracking-wider block mb-1">Framing Aman Demo 30–60 Detik di Hadapan Penguji:</strong>
-          <p>"Izin Bapak/Ibu Penguji, ini adalah simulasi purwarupa awal (proof-of-concept) modul WebGL Three.js untuk membuktikan kelayakan teknis visualisasi 360°, kain Cotton Combed PBR, dan pembatasan area DTF 30×35 cm. Fitur penuh tetap akan diiterasi dan diuji setelah proposal ini disetujui."</p>
+          <strong class="text-blue-900 font-bold text-xs uppercase tracking-wider block mb-1">Framing Aman Demo 30–60 Detik di Hadapan Penguji:</strong>
+          <p>"Izin Bapak/Ibu Penguji, ini adalah simulasi purwarupa awal (proof-of-concept) modul WebGL Three.js untuk membuktikan kelayakan visualisasi 360°, kain Cotton Combed PBR, dan penguncian area cetak DTF 30×35 cm. Fitur penuh tetap diiterasi dan diuji setelah proposal ini disetujui."</p>
         `
         },
         {
-          id: 12,
-          section: "PENUTUP · RENCANA LUARAN & DISKUSI",
+          id: 13,
+          section: "PENUTUP · TARGET LUARAN & Q&A",
           title: "Target Luaran, Terima Kasih & Sesi Q&A",
           camPos: { x: 0, y: 0.12, z: 4.6 },
           camTarget: { x: 0, y: 0, z: 0 },
           modelPos: { x: 1.25, y: -0.15, z: 0.1 },
           modelRot: { x: 0.02, y: 0, z: 0 },
           isInteractive: false,
+          isTurntable: true,
           showGizmo: false,
           showTechFrame: false,
           notes: `
-          <strong class="text-blue-600 font-bold text-xs uppercase tracking-wider block mb-1">Penutup Proposal (Sesuai Etika Bab I–III UNM 2025):</strong>
-          <p>"Demikian paparan proposal penelitian saya beserta target tiga luaran yang akan direalisasikan pasca-seminar. Mohon arahan, kritik, dan bimbingan dari Bapak/Ibu Penguji dan Pembimbing. Wassalamu'alaikum Wr. Wb."</p>
+          <strong class="text-blue-900 font-bold text-xs uppercase tracking-wider block mb-1">Penutup Proposal (Sesuai Etika Bab I–III UNM 2025):</strong>
+          <p>"Demikian paparan proposal penelitian saya beserta tiga target luaran yang akan direalisasikan pasca-seminar. Mohon arahan, kritik, dan bimbingan dari Bapak/Ibu Penguji dan Pembimbing. Wassalamu'alaikum Wr. Wb."</p>
         `
         }
       ];
@@ -1465,7 +1521,7 @@
           }
         });
         floatGroup.add(tshirtRoot);
-        tshirtRoot.visible = (currentSlide !== 7 && currentSlide !== 9);
+        tshirtRoot.visible = !(slidesData[currentSlide] && slidesData[currentSlide].diagramMode);
         window.tshirtRoot = tshirtRoot;
         window.decalMesh = decalMesh;
         window.backDecalMesh = backDecalMesh;
@@ -1733,12 +1789,12 @@
       modulHaloGroup.add(haloRingInner);
 
       const haloModules = [
-        { pos: [-0.95, 0.64, 0.14], anchor: [-0.62, 0.48, 0.06], header: 'MODUL 01', line: 'Katalog Produk', variant: 'white' },
+        { pos: [-0.95, 0.64, 0.14], anchor: [-0.62, 0.48, 0.06], header: 'MODUL 01', line: 'Katalog & Varian', variant: 'white' },
         { pos: [0.95, 0.64, 0.14], anchor: [0.62, 0.48, 0.06], header: 'MODUL 02 · INTI', line: 'Studio 3D WebGL', variant: 'navy-solid' },
-        { pos: [-1.02, 0.02, 0.10], anchor: [-0.66, 0.02, 0.04], header: 'MODUL 03', line: 'Kalkulator Tarif', variant: 'white' },
-        { pos: [1.02, 0.02, 0.10], anchor: [0.66, 0.02, 0.04], header: 'MODUL 04', line: 'Checkout QRIS/VA', variant: 'white' },
-        { pos: [-0.93, -0.60, 0.14], anchor: [-0.60, -0.44, 0.06], header: 'MODUL 05', line: 'Tracking Order', variant: 'slate' },
-        { pos: [0.93, -0.60, 0.14], anchor: [0.60, -0.44, 0.06], header: 'MODUL 06', line: 'Admin 300 DPI', variant: 'slate' }
+        { pos: [-1.02, 0.02, 0.10], anchor: [-0.66, 0.02, 0.04], header: 'MODUL 03', line: 'Batas DTF 30×35', variant: 'white' },
+        { pos: [1.02, 0.02, 0.10], anchor: [0.66, 0.02, 0.04], header: 'MODUL 04', line: 'Kalkulator Biaya', variant: 'white' },
+        { pos: [-0.93, -0.60, 0.14], anchor: [-0.60, -0.44, 0.06], header: 'MODUL 05', line: 'Sandbox QRIS/VA', variant: 'slate' },
+        { pos: [0.93, -0.60, 0.14], anchor: [0.60, -0.44, 0.06], header: 'MODUL 06', line: 'Dasbor Pengelola', variant: 'slate' }
       ];
       haloModules.forEach((m) => {
         const plaque = create3DDiagramSlab({
@@ -1921,8 +1977,8 @@
         const numTot = document.getElementById('slide-num-total');
         if (numTot) numTot.textContent = String(totalSlides).padStart(2, '0');
 
-        // Smooth reset of floatGroup rotation when leaving turntable closing slide (idx 12)
-        if (prevSlide === 12 && currentSlide !== 12) {
+        // Smooth reset of floatGroup rotation when leaving turntable closing slide
+        if (slidesData[prevSlide] && slidesData[prevSlide].isTurntable && !data.isTurntable) {
           gsap.to(floatGroup.rotation, { y: 0, duration: 0.6, ease: 'power2.out' });
         }
 
@@ -1942,7 +1998,7 @@
         // Gizmo visibility per slide
         gizmoGroup.visible = data.showGizmo;
 
-        // Bespoke 3D Heat-Press Calibration Frame per slide ('front' on Slide 7, 'back' on Slide 4)
+        // Bespoke 3D Heat-Press Calibration Frame per slide ('front' / 'back')
         if (data.showTechFrame === 'back') {
           techFrameGroup.visible = true;
           techFrameGroup.position.set(0, 0.33, -0.483);
@@ -1955,23 +2011,21 @@
           techFrameGroup.visible = false;
         }
 
-        // 3D Spatial Visibility Choreography:
-        // Slide 08 (idx 7) -> Kerangka Konseptual 3D; Slide 09 (idx 8) -> Kaos 3D + Halo 6 Modul
-        // Slide 10 (idx 9) -> Model Prototyping 3D; Other slides -> Kaos 3D Studio
-        const isDiagramOnlySlide = (currentSlide === 7 || currentSlide === 9);
+        // 3D Spatial Visibility Choreography (Data-Driven via slidesData flags)
+        const isDiagramOnlySlide = Boolean(data.diagramMode);
         const showShirt = !isDiagramOnlySlide;
 
         modelGroup.visible = true;
         if (tshirtRoot) tshirtRoot.visible = showShirt;
         if (decalMesh) decalMesh.visible = showShirt;
         if (backDecalMesh) backDecalMesh.visible = showShirt;
-        if (pedestalGroup) pedestalGroup.visible = showShirt && currentSlide !== 8;
+        if (pedestalGroup) pedestalGroup.visible = showShirt && !data.showHalo;
 
-        if (kerangka3DGroup) kerangka3DGroup.visible = (currentSlide === 7);
-        if (modulHaloGroup) modulHaloGroup.visible = (currentSlide === 8);
-        if (prototyping3DGroup) prototyping3DGroup.visible = (currentSlide === 9);
+        if (kerangka3DGroup) kerangka3DGroup.visible = (data.diagramMode === 'kerangka');
+        if (modulHaloGroup) modulHaloGroup.visible = Boolean(data.showHalo);
+        if (prototyping3DGroup) prototyping3DGroup.visible = (data.diagramMode === 'prototyping');
 
-        if (currentSlide === 11) {
+        if (data.isInteractive) {
           if (typeof updateGizmoPosition === 'function') {
             updateGizmoPosition();
           }
@@ -2101,7 +2155,7 @@
       const dragMouse = new THREE.Vector2();
 
       function isInteractive3DSlide() {
-        return currentSlide === 11 || (slidesData[currentSlide] && slidesData[currentSlide].isInteractive);
+        return Boolean(slidesData[currentSlide] && slidesData[currentSlide].isInteractive);
       }
 
       function getActiveDecal() {
@@ -2375,8 +2429,8 @@
           // Living gentle floating bob on floatGroup only (GSAP controls modelGroup with zero jitter!)
           floatGroup.position.y = Math.sin(elapsedTime * 1.2) * 0.015;
 
-          if (currentSlide === 12) {
-            // Slide 13 (Penutup & Sesi Q&A): Continuous graceful 360° turntable showcase
+          if (slidesData[currentSlide] && slidesData[currentSlide].isTurntable) {
+            // Closing slide: Continuous graceful 360° turntable showcase
             floatGroup.rotation.y = elapsedTime * 0.42;
           } else {
             // Subtle breathing sway (+- 1.7 degrees)
@@ -2386,7 +2440,7 @@
           controls.update();
         }
 
-        // Animate architectural halo rings on Slide 09 (Model Hipotetik)
+        // Animate architectural halo rings on Model Hipotetik slide
         if (modulHaloGroup && modulHaloGroup.visible) {
           haloRingOuter.rotation.z = elapsedTime * 0.15;
           haloRingInner.rotation.z = -elapsedTime * 0.18;
@@ -2394,7 +2448,7 @@
 
         // Dynamic Decal Orientation Culling (Parity with Kaos Kami Web Engine)
         // Only active when 3D garment is displayed (hidden on 3D diagram-only slides)
-        const shirtVisible = tshirtRoot ? tshirtRoot.visible : (currentSlide !== 7 && currentSlide !== 9);
+        const shirtVisible = tshirtRoot ? tshirtRoot.visible : !(slidesData[currentSlide] && slidesData[currentSlide].diagramMode);
         if (!shirtVisible) {
           if (decalMesh) decalMesh.visible = false;
           if (backDecalMesh) backDecalMesh.visible = false;
@@ -2446,7 +2500,7 @@
         } else if (e.key === 'f' || e.key === 'F') {
           toggleFullscreen();
         } else if (e.key === 'r' || e.key === 'R') {
-          if (currentSlide === 11) {
+          if (isInteractive3DSlide()) {
             window.resetModelToCenter();
           } else {
             goToSlide(currentSlide);
